@@ -1,9 +1,9 @@
-import { useNavigate } from 'react-router-dom'
+
 import { useLang } from '../context/LangContext'
 import './ErrorPage.css'
 
 export default function ErrorPage() {
-  const navigate = useNavigate()
+ 
   const { t } = useLang()
   const e = t.error
 

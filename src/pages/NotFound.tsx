@@ -1,9 +1,9 @@
-import { useNavigate } from 'react-router-dom'
+
 import { useLang } from '../context/LangContext'
 import './ErrorPage.css'
 
 export default function NotFound() {
-  const navigate = useNavigate()
+
   const { t } = useLang()
   const n = t.notFound
 
