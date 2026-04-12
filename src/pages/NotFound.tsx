@@ -36,9 +36,9 @@ export default function NotFound() {
       <h1 className="error-title">{n.title}</h1>
       <p className="error-desc">{n.desc}</p>
 
-      <button className="btn-primary" onClick={() => navigate('/')}>
-        {n.btn}
-      </button>
+    <button className="btn-primary" onClick={() => window.location.href = '/'}>
+  {n.btn}
+</button>
     </div>
   )
 }
