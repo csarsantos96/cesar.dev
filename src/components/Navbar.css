@@ -16,8 +16,27 @@
   font-size: 13px;
   color: var(--accent);
   letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
 }
-.nav-logo span { color: var(--text3); }
+
+.nav-prefix { color: var(--text3); }
+.nav-icon { color: var(--accent); font-family: var(--mono); margin-right: 4px; }
+
+.nav-cursor {
+  display: inline-block;
+  width: 6px;
+  height: 13px;
+  background: var(--accent);
+  vertical-align: middle;
+  margin-left: 2px;
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
 
 .nav-links {
   display: flex;

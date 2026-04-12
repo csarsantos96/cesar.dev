@@ -17,8 +17,11 @@ export default function Navbar() {
 
   return (
     <nav className="navbar">
-      <a href="#" className="nav-logo"><span>~/</span>cesarsantos.dev</a>
-      <ul className="nav-links">
+      <a href="#" className="nav-logo">
+        <span className="nav-prefix">~/ </span>
+        <span className="nav-icon">&gt;_ </span>
+        cesarsantos.dev<span className="nav-cursor" />
+      </a>      <ul className="nav-links">
         {links.map(l => (
           <li key={l.href}><a href={l.href}>{l.label}</a></li>
         ))}
