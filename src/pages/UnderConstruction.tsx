@@ -1,6 +1,24 @@
+import { useLang } from '../context/LangContext'
 
+const content = {
+  pt: {
+    title: 'Em Construção',
+    desc: '> site em desenvolvimento. volte em breve.',
+  },
+  en: {
+    title: 'Under Construction',
+    desc: '> site under development. come back soon.',
+  },
+  de: {
+    title: 'Im Aufbau',
+    desc: '> seite wird entwickelt. bald zurück.',
+  },
+}
 
 export default function UnderConstruction() {
+  const { lang } = useLang()
+  const c = content[lang]
+
   return (
     <div style={{
       minHeight: '100vh',
@@ -13,12 +31,15 @@ export default function UnderConstruction() {
       color: '#f5f5f5',
       gap: '1.5rem',
     }}>
+<div style={{ fontSize: 200 }}>🚧</div>
+      <div style={{ fontSize: 40, display: 'flex', gap: '0.5rem' }}>
+</div>
       <div style={{ fontSize: 11, color: '#4a4a4a', letterSpacing: '0.1em' }}>// status</div>
       <h1 style={{ fontSize: 'clamp(2rem, 5vw, 4rem)', fontWeight: 800, letterSpacing: '-0.03em' }}>
-        Em <span style={{ color: '#ffffff' }}>Construção</span>
+        {c.title}
       </h1>
       <p style={{ fontFamily: 'JetBrains Mono', fontSize: 12, color: '#888', letterSpacing: '0.05em' }}>
-        &gt; site em desenvolvimento. volte em breve.
+        {c.desc}
       </p>
       <div style={{ display: 'flex', gap: 6, marginTop: 8 }}>
         <span style={{ width: 8, height: 8, borderRadius: '50%', background: '#ff5f56', display: 'inline-block' }} />
