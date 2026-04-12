@@ -13,7 +13,9 @@ export default function Hero() {
           <span className="status-dot" />
           {h.status}
         </div>
-        <div className="hero-avatar">CS</div>
+        <div className="hero-avatar">
+            <img src="/image/avatar.jpeg" alt="César Santos" />
+        </div>
         <h1 className="hero-name">César<br /><span className="accent">Santos</span></h1>
         <p className="hero-title">{h.title}</p>
         <p className="hero-desc">{h.desc}</p>
