@@ -5,7 +5,7 @@ import Footer from './components/Footer'
 import Home from './pages/Home'
 import NotFound from './pages/NotFound'
 import ErrorPage from './pages/Error'
-import UnderConstruction from './pages/UnderConstruction'
+//import UnderConstruction from './pages/UnderConstruction'
 import './styles/global.css'
 
 export default function App() {
@@ -15,7 +15,7 @@ export default function App() {
         <Navbar />
         <main>
           <Routes>
-            <Route path="/" element={<UnderConstruction />} />
+            {/* <Route path="/" element={<UnderConstruction />} /> */}
             <Route path="/home" element={<Home />} />
             <Route path="/error" element={<ErrorPage />} />
             <Route path="*" element={<NotFound />} />
