@@ -15,8 +15,7 @@ export default function App() {
         <Navbar />
         <main>
           <Routes>
-            {/* <Route path="/" element={<UnderConstruction />} /> */}
-            <Route path="/home" element={<Home />} />
+            <Route path="/" element={<Home />} />
             <Route path="/error" element={<ErrorPage />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
