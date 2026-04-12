@@ -1,7 +1,6 @@
 .skills-grid {
   display: grid;
-    grid-template-columns: repeat(3, 1fr);
-
+  grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
 }
 
@@ -13,6 +12,7 @@
   padding: 1.2rem;
   overflow: hidden;
   transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+  min-width: 0;
 }
 
 .skill-group::before {
@@ -33,9 +33,9 @@
   transform: translateY(-4px);
   border-color: var(--group-color);
   box-shadow:
-  0 0 0 1px var(--group-color),
-  0 10px 30px rgba(0, 0, 0, 0.4),
-  0 0 30px color-mix(in srgb, var(--group-color) 25%, transparent);
+    0 0 0 1px var(--group-color),
+    0 10px 30px rgba(0, 0, 0, 0.4),
+    0 0 30px color-mix(in srgb, var(--group-color) 25%, transparent);
 }
 
 .skill-group-header {
@@ -61,6 +61,7 @@
 .skill-group-title-wrap {
   display: flex;
   flex-direction: column;
+  min-width: 0;
 }
 
 .skill-group-title {
@@ -70,6 +71,7 @@
   letter-spacing: 0.08em;
   text-transform: uppercase;
   margin: 0;
+  word-break: break-word;
 }
 
 .skill-tags {
@@ -87,10 +89,77 @@
   border: 1px solid var(--border);
   color: var(--text2);
   transition: all 0.2s ease;
+  word-break: break-word;
 }
 
 .skill-tag:hover {
   border-color: var(--group-color);
   color: var(--group-color);
   transform: translateY(-2px) scale(1.05);
+}
+
+/* tablet */
+@media (max-width: 1024px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* mobile */
+@media (max-width: 768px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+    gap: 0.9rem;
+  }
+
+  .skill-group {
+    padding: 1rem;
+    border-radius: 16px;
+  }
+
+  .skill-group-header {
+    gap: 10px;
+    margin-bottom: 0.9rem;
+  }
+
+  .skill-group-icon {
+    width: 34px;
+    height: 34px;
+    border-radius: 10px;
+  }
+
+  .skill-group-title {
+    font-size: 12px;
+    letter-spacing: 0.06em;
+  }
+
+  .skill-tags {
+    gap: 7px;
+  }
+
+  .skill-tag {
+    font-size: 10px;
+    padding: 6px 9px;
+  }
+}
+
+/* mobile menor */
+@media (max-width: 480px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+  }
+
+  .skill-group {
+    padding: 0.95rem;
+  }
+
+  .skill-group-title {
+    font-size: 11px;
+  }
+
+  .skill-tag {
+    font-size: 10px;
+    padding: 5px 8px;
+  }
 }
