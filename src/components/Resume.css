@@ -135,7 +135,7 @@
 .resume-btn {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
 }
 
 @media (max-width: 900px) {

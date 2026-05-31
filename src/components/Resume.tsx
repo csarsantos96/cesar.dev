@@ -9,12 +9,20 @@ type ResumeItem = {
   desc: string
 }
 
+const CV_FILES: Record<string, string> = {
+  en: '/cv-en.pdf',
+  pt: '/cv-pt.pdf',
+  de: '/cv-de.pdf',
+}
+
 export default function Resume() {
-  const { t } = useLang()
+  const { t, lang } = useLang()
   const r = t.resume as typeof t.resume & {
     experience: ResumeItem[]
     education: ResumeItem[]
   }
+
+  const cvUrl = CV_FILES[lang] ?? '/cv-en.pdf'
 
   return (
     <section id="resume" className="section-wrap">
@@ -67,7 +75,7 @@ export default function Resume() {
           </div>
 
           <div className="resume-download">
-            <a href="#" className="btn-primary resume-btn">
+            <a href={cvUrl} download className="btn-primary resume-btn">
               <Download size={14} />
               {r.download}
             </a>

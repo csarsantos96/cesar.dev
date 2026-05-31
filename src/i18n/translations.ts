@@ -47,6 +47,14 @@ export const translations = {
           repoUrl: 'https://github.com/csarsantos96/BigData',
         },
         {
+          type: 'DEVOPS',
+          name: 'Primeiro Workflow com Github Actions',
+          desc: 'Pipeline simples de CI/CD com GitHub Actions para automatizar validações, testar o workflow e entender a base de automações em projetos DevOps.',
+          stack: ['GitHub Actions', 'CI/CD'],
+          liveUrl: null,
+          repoUrl: 'https://github.com/csarsantos96/linuxtips-github-actions',
+        },
+        {
           type: 'BACK-END',
           name: 'BookStore API',
           desc: 'API RESTful para gerenciamento de livraria com autenticação, CRUD completo e deploy no Heroku.',
@@ -60,13 +68,13 @@ export const translations = {
     resume: {
       tag: 'currículo', title: 'Experiência & Educação',
       expLabel: '// experiência', eduLabel: '// educação',
-      present: 'Presente', download: '⬇ Baixar CV (PDF)',
+      present: 'Presente', download: ' Baixar CV (PDF)',
       experience: [
         {
-          date: 'Out 2025 — Presente',
-          title: 'Software Developer (Pleno)',
+          date: 'Out 2025 — Maio 2026',
+          title: 'Software Engineer',
           company: 'SONDA — Tribunal de Justiça do Acre',
-          desc: 'Integração de módulos de IA com WhisperX e CUDA para o projeto ADA, possibilitando transcrição jurídica de alta performance. Otimização do Sistema Vera, automação de processos críticos via APIs REST em Django e Flask, e implementação de pipelines CI/CD via GitLab.',
+          desc: 'Arquitetei pipeline de transcrição jurídica com diarização (WhisperX + CUDA, GPU NVIDIA A2000) em ambiente offline. Projetei backend Flask completo para sistema de licitação assistida por IA com Keycloak + JWT, integração LLM e cobertura pytest. Modernizei o Sistema Vera com views PostgreSQL otimizadas. Liderança técnica interina de equipe mista dev + suporte N1/N2.',
         },
         {
           date: 'Mar 2024 — Out 2024',
@@ -165,6 +173,15 @@ export const translations = {
       repoUrl: 'https://github.com/csarsantos96/BigData',
     },
     {
+      type: 'DEVOPS',
+      name: 'First Workflow with GitHub Actions',
+      desc: 'Simple CI/CD pipeline with GitHub Actions to automate validations, test workflows, and understand the basics of DevOps automation.',
+      stack: ['GitHub Actions', 'CI/CD'],
+      liveUrl: null,
+      repoUrl: 'https://github.com/csarsantos96/linuxtips-github-actions',
+    },
+
+    {
       type: 'BACK-END',
       name: 'BookStore API',
       desc: 'RESTful API for bookstore management with authentication, full CRUD and deployment on Heroku.',
@@ -178,13 +195,13 @@ export const translations = {
     resume: {
       tag: 'resume', title: 'Experience & Education',
       expLabel: '// experience', eduLabel: '// education',
-      present: 'Present', download: '⬇ Download CV (PDF)',
+      present: 'Present', download: 'Download CV (PDF)',
       experience: [
         {
-          date: 'Oct 2025 — Present',
-          title: 'Full Stack Developer | Java & Python Specialist',
+          date: 'Oct 2025 — May 2026',
+          title: 'Software Engineer',
           company: 'SONDA — Court of Justice of Acre',
-          desc: 'Led AI module integration using WhisperX and CUDA for the ADA project, enabling high-performance legal transcription. Enhanced the Vera System core modules, automated internal processes via REST APIs, and implemented CI/CD pipelines through GitLab.',
+          desc: 'Architected judicial transcription pipeline (WhisperX + CUDA, NVIDIA A2000) deployed fully offline. Designed full Flask backend for AI-assisted procurement system with Keycloak + JWT, LLM integration and pytest coverage. Modernized Vera System with optimized PostgreSQL views. Interim technical lead for mixed dev + L1/L2 support team.',
         },
         {
           date: 'Mar 2024 — Oct 2024',
@@ -283,6 +300,15 @@ export const translations = {
       repoUrl: 'https://github.com/csarsantos96/BigData',
     },
     {
+      type: 'DEVOPS',
+      name: 'Erster Workflow mit GitHub Actions',
+      desc: 'Einfache CI/CD-Pipeline mit GitHub Actions zur Automatisierung von Validierungen, zum Testen von Workflows und zum Verstehen der Grundlagen von DevOps-Automatisierung.',
+      stack: ['GitHub Actions', 'CI/CD'],
+      liveUrl: null,
+      repoUrl: 'https://github.com/csarsantos96/linuxtips-github-actions',
+    },
+
+    {
       type: 'BACK-END',
       name: 'BookStore API',
       desc: 'RESTful API für Buchverwaltung mit Authentifizierung, vollständigem CRUD und Deployment auf Heroku.',
@@ -296,13 +322,13 @@ export const translations = {
     resume: {
       tag: 'lebenslauf', title: 'Erfahrung & Ausbildung',
       expLabel: '// erfahrung', eduLabel: '// ausbildung',
-      present: 'Heute', download: '⬇ Lebenslauf herunterladen (PDF)',
+      present: 'Heute', download: ' Lebenslauf herunterladen (PDF)',
       experience: [
         {
-          date: 'Okt 2025 — Heute',
-          title: 'Full Stack Developer | Java & Python Specialist',
+          date: 'Okt 2025 — Mai 2026',
+          title: 'Software Engineer',
           company: 'SONDA — Court of Justice of Acre',
-          desc: 'Led AI module integration using WhisperX and CUDA for the ADA project, enabling high-performance legal transcription. Enhanced the Vera System core modules, automated internal processes via REST APIs, and implemented CI/CD pipelines through GitLab.',
+          desc: 'Architected judicial transcription pipeline (WhisperX + CUDA, NVIDIA A2000) deployed fully offline. Designed full Flask backend for AI-assisted procurement system with Keycloak + JWT, LLM integration and pytest coverage. Modernized Vera System with optimized PostgreSQL views. Interim technical lead for mixed dev + L1/L2 support team.',
         },
         {
           date: 'Mär 2024 — Okt 2024',

@@ -1,80 +1,114 @@
-import { ExternalLink, ShieldCheck, Award, Cloud } from 'lucide-react'
+import type { CSSProperties, ElementType } from 'react'
+import {
+  ExternalLink,
+  ShieldCheck,
+  Award,
+  Cloud,
+  Code2,
+  ServerCog,
+  Wrench,
+} from 'lucide-react'
 import { useLang } from '../context/LangContext'
 import './Certifications.css'
 
-const certColors: Record<
-  string,
-  { bg: string; border: string; color: string; glow: string }
-> = {
-  Oracle: {
-    bg: 'rgba(249,115,22,0.12)',
-    border: 'rgba(249,115,22,0.4)',
-    color: '#f97316',
-    glow: 'rgba(249,115,22,0.18)',
-  },
-  AWS: {
-    bg: 'rgba(251,191,36,0.12)',
-    border: 'rgba(251,191,36,0.4)',
-    color: '#fbbf24',
-    glow: 'rgba(251,191,36,0.18)',
-  },
-  Docker: {
+type SkillKey =
+  | 'backend'
+  | 'ai'
+  | 'devops'
+  | 'cybersecurity'
+  | 'cloud'
+  | 'frontend'
+  | 'tools'
+
+type SkillColor = {
+  bg: string
+  border: string
+  color: string
+  glow: string
+}
+
+type Cert = {
+  badge: string
+  name: string
+  issuer: string
+  year: string
+  url: string | null
+}
+
+type CertStyle = CSSProperties & {
+  '--cert-bg': string
+  '--cert-border': string
+  '--cert-color': string
+  '--cert-glow': string
+}
+
+const skillColors: Record<SkillKey, SkillColor> = {
+  backend: {
     bg: 'rgba(0,212,255,0.12)',
     border: 'rgba(0,212,255,0.4)',
     color: '#00d4ff',
     glow: 'rgba(0,212,255,0.18)',
   },
-  K8S: {
-    bg: 'rgba(163,139,250,0.12)',
-    border: 'rgba(163,139,250,0.4)',
+  ai: {
+    bg: 'rgba(167,139,250,0.12)',
+    border: 'rgba(167,139,250,0.4)',
     color: '#a78bfa',
-    glow: 'rgba(163,139,250,0.18)',
+    glow: 'rgba(167,139,250,0.18)',
   },
-  CompTIA: {
-    bg: 'rgba(255,77,109,0.12)',
-    border: 'rgba(255,77,109,0.4)',
-    color: '#ff4d6d',
-    glow: 'rgba(255,77,109,0.18)',
+  devops: {
+    bg: 'rgba(255,107,53,0.12)',
+    border: 'rgba(255,107,53,0.4)',
+    color: '#ff6b35',
+    glow: 'rgba(255,107,53,0.18)',
   },
-  Cisco: {
-    bg: 'rgba(0,188,212,0.12)',
-    border: 'rgba(0,188,212,0.4)',
-    color: '#00bcd4',
-    glow: 'rgba(0,188,212,0.18)',
-  },
-  OSEP: {
-    bg: 'rgba(39,201,63,0.12)',
-    border: 'rgba(39,201,63,0.4)',
-    color: '#27c93f',
-    glow: 'rgba(39,201,63,0.18)',
-  },
-  Linux: {
-    bg: 'rgba(255,183,77,0.12)',
-    border: 'rgba(255,183,77,0.4)',
-    color: '#ffb74d',
-    glow: 'rgba(255,183,77,0.18)',
-  },
-  EBAC: {
-    bg: 'rgba(99,102,241,0.12)',
-    border: 'rgba(99,102,241,0.4)',
-    color: '#6366f1',
-    glow: 'rgba(99,102,241,0.18)',
-  },
-  FIAP: {
-    bg: 'rgba(139,92,246,0.12)',
-    border: 'rgba(139,92,246,0.4)',
-    color: '#8b5cf6',
-    glow: 'rgba(139,92,246,0.18)',
-  },
-  LTips: {
+  cybersecurity: {
     bg: 'rgba(255,255,255,0.06)',
     border: 'rgba(255,255,255,0.25)',
     color: '#e5e7eb',
     glow: 'rgba(255,255,255,0.12)',
   },
+  cloud: {
+    bg: 'rgba(251,191,36,0.12)',
+    border: 'rgba(251,191,36,0.4)',
+    color: '#fbbf24',
+    glow: 'rgba(251,191,36,0.18)',
+  },
+  frontend: {
+    bg: 'rgba(99,102,241,0.12)',
+    border: 'rgba(99,102,241,0.4)',
+    color: '#6366f1',
+    glow: 'rgba(99,102,241,0.18)',
+  },
+  tools: {
+    bg: 'rgba(244,114,182,0.12)',
+    border: 'rgba(244,114,182,0.4)',
+    color: '#f472b6',
+    glow: 'rgba(244,114,182,0.18)',
+  },
 }
 
-export const certs = [
+const certSkillMap: Record<string, SkillKey> = {
+  Oracle: 'cloud',
+  AWS: 'cloud',
+  GCP: 'cloud',
+  OCI: 'cloud',
+
+  Docker: 'devops',
+  K8S: 'devops',
+  Kubernetes: 'devops',
+  LTips: 'devops',
+
+  EBAC: 'backend',
+
+  FIAP: 'cybersecurity',
+  CompTIA: 'cybersecurity',
+  Cisco: 'cybersecurity',
+  OSEP: 'cybersecurity',
+
+  Linux: 'cloud',
+}
+
+const certs: Cert[] = [
   {
     badge: 'Oracle',
     name: 'Oracle Cloud Infrastructure 2025 Certified AI Foundations Associate',
@@ -110,12 +144,15 @@ export const certs = [
     year: '2022',
     url: 'https://lms.ebaconline.com.br/certs/validate/32585-93727-22726-54752',
   },
-  
 ]
 
-function getCertIcon(badge: string) {
-  if (badge === 'AWS' || badge === 'Oracle' || badge === 'FIAP') return Cloud
-  if (badge === 'CompTIA' || badge === 'OSEP' || badge === 'Cisco') return ShieldCheck
+function getCertIcon(skill: SkillKey): ElementType {
+  if (skill === 'cloud') return Cloud
+  if (skill === 'devops') return Code2
+  if (skill === 'cybersecurity') return ShieldCheck
+  if (skill === 'backend') return ServerCog
+  if (skill === 'tools') return Wrench
+
   return Award
 }
 
@@ -130,14 +167,9 @@ export default function Certifications() {
 
       <div className="certs-list fade-in">
         {certs.map((cert, i) => {
-          const color = certColors[cert.badge] ?? {
-            bg: 'rgba(255,255,255,0.07)',
-            border: 'rgba(255,255,255,0.2)',
-            color: '#fff',
-            glow: 'rgba(255,255,255,0.12)',
-          }
-
-          const Icon = getCertIcon(cert.badge)
+          const skill = certSkillMap[cert.badge] ?? 'tools'
+          const color = skillColors[skill]
+          const Icon = getCertIcon(skill)
           const Wrapper = cert.url ? 'a' : 'div'
 
           return (
@@ -150,7 +182,7 @@ export default function Certifications() {
                   '--cert-border': color.border,
                   '--cert-color': color.color,
                   '--cert-glow': color.glow,
-                } as React.CSSProperties
+                } as CertStyle
               }
               {...(cert.url
                 ? { href: cert.url, target: '_blank', rel: 'noreferrer' }
@@ -171,6 +203,7 @@ export default function Certifications() {
 
               <div className="cert-meta">
                 <div className="cert-year">{cert.year}</div>
+
                 {cert.url && (
                   <div className="cert-arrow">
                     <ExternalLink size={16} />

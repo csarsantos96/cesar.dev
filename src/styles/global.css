@@ -18,6 +18,7 @@
   --red: #ff4d6d;
   --mono: 'JetBrains Mono', monospace;
   --sans: 'Syne', sans-serif;
+  --available : #22c55e
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -80,7 +81,7 @@ a { text-decoration: none; color: inherit; }
 }
 
 .btn-primary {
-  display: inline-block;
+  display: inline-flex;
   padding: 10px 24px;
   background: var(--accent);
   color: #000;

@@ -1,5 +1,4 @@
 import { useLang } from '../context/LangContext'
-import { certs } from './Certifications'
 import './Hero.css'
 
 export default function Hero() {
@@ -31,7 +30,7 @@ export default function Hero() {
           <div className="stat-card"><div className="stat-num">8+</div><div className="stat-label">{s.s1}</div></div>
           <div className="stat-card"><div className="stat-num">12+</div><div className="stat-label">{s.s2}</div></div>
           <div className="stat-card">
-            <div className="stat-num">{certs.filter(c => c.year !== '—').length}</div>
+            <div className="stat-num">5</div>
             <div className="stat-label">{s.s3}</div>
           </div>
           <div className="stat-card"><div className="stat-num">3</div><div className="stat-label">{s.s4}</div></div>

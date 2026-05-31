@@ -1,4 +1,4 @@
-import type { CSSProperties } from 'react'
+import type { CSSProperties, ElementType } from 'react'
 import {
   Brain,
   Cloud,
@@ -23,8 +23,12 @@ type SkillGroupKey =
 type SkillGroup = {
   key: SkillGroupKey
   color: string
-  icon: React.ElementType
+  icon: ElementType
   tags: string[]
+}
+
+type SkillGroupStyle = CSSProperties & {
+  '--group-color': string
 }
 
 const groups: SkillGroup[] = [
@@ -44,7 +48,7 @@ const groups: SkillGroup[] = [
     key: 'devops',
     color: '#ff6b35',
     icon: Code2,
-    tags: ['Docker', 'Kubernetes', 'GitHub Actions', 'Jenkins'],
+    tags: ['Docker', 'Kubernetes', 'GitHub Actions', 'Jenkins', 'CI/CD','Terraform','Ansible','ArgoCD','Helm' ],
   },
   {
     key: 'cybersecurity',
@@ -89,7 +93,7 @@ export default function Skills() {
             <article
               className="skill-group"
               key={group.key}
-              style={{ '--group-color': group.color } as CSSProperties}
+              style={{ '--group-color': group.color } as SkillGroupStyle}
             >
               <div className="skill-group-header">
                 <div className="skill-group-icon">
