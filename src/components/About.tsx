@@ -50,7 +50,7 @@ export default function About() {
               </a>
 
               <a
-                href="mailto:cesar@cesarsantos.dev"
+                href="mailto:hello@cesarsantos.dev"
                 className="social-btn"
                 aria-label="Email"
               >

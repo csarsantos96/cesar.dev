@@ -9,8 +9,8 @@ const contactItems = [
   {
     icon: HiOutlineMail,
     label: 'Email',
-    value: 'cesar@cesarsantos.dev',
-    href: 'mailto:cesar@cesarsantos.dev',
+    value: 'hello@cesarsantos.dev',
+    href: 'mailto:hello@cesarsantos.dev',
   },
   {
     icon: FaLinkedin,
