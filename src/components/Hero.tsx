@@ -27,7 +27,7 @@ export default function Hero() {
 
       <div className="hero-right fade-in" style={{ transitionDelay: '0.15s' }}>
         <div className="stats-grid">
-          <div className="stat-card"><div className="stat-num">8+</div><div className="stat-label">{s.s1}</div></div>
+          <div className="stat-card"><div className="stat-num">5+</div><div className="stat-label">{s.s1}</div></div>
           <div className="stat-card"><div className="stat-num">12+</div><div className="stat-label">{s.s2}</div></div>
           <div className="stat-card">
             <div className="stat-num">5</div>
