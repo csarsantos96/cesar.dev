@@ -4,7 +4,7 @@ import {
   Cloud,
   Code2,
   Lock,
-  MonitorCog,
+  
   ServerCog,
   Wrench,
 } from 'lucide-react'
@@ -17,7 +17,6 @@ type SkillGroupKey =
   | 'devops'
   | 'cybersecurity'
   | 'cloud'
-  | 'frontend'
   | 'tools'
 
 type SkillGroup = {
@@ -61,12 +60,6 @@ const groups: SkillGroup[] = [
     color: '#fbbf24',
     icon: Cloud,
     tags: ['AWS', 'GCP', 'Linux', 'Nginx', 'OCI - Oracle Cloud'],
-  },
-  {
-    key: 'frontend',
-    color: '#6366f1',
-    icon: MonitorCog,
-    tags: ['React', 'Vue.js', 'TypeScript', 'Next.js', 'TailwindCSS'],
   },
   {
     key: 'tools',

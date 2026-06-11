@@ -19,8 +19,8 @@ export const translations = {
         'Back-end com Java, Python, Django, Flask e Node.js',
         'Infraestrutura cloud-native com Kubernetes e Docker',
         'Segurança: pentest, análise de vulnerabilidades, SIEM',
-        'Pipelines CI/CD robustos e GitOps',
-        'Desenvolvimento front-end com React e Vue.js',
+        'Pipelines CI/CD robustos e GitOps, GitHub Actions',
+       
       ],
     },
     skills: { tag: 'tecnologias', title: 'Stack & Skills',
@@ -30,7 +30,7 @@ export const translations = {
         devops: 'DevOps',
         cybersecurity: 'Cibersegurança',
         cloud: 'Cloud & Infra',
-        frontend: 'Front-end',
+        
         tools: 'Ferramentas',
       }, 
     },
@@ -145,8 +145,8 @@ export const translations = {
         'Back-end with Java, Python, Django, Flask and Node.js',
         'Cloud-native infrastructure with Kubernetes and Docker',
         'Security: pentest, vulnerability analysis, SIEM',
-        'Robust CI/CD pipelines and GitOps',
-        'Front-end development with React and Vue.js',
+        'Robust CI/CD pipelines and GitOps, GitHub Actions',
+        
       ],
     },
     skills: { tag: 'technologies', title: 'Stack & Skills',
@@ -156,7 +156,6 @@ export const translations = {
         devops: 'DevOps',
         cybersecurity: 'Cibersegurança',
         cloud: 'Cloud & Infra',
-        frontend: 'Front-end',
         tools: 'Ferramentas',
       }, 
     },
@@ -272,8 +271,8 @@ export const translations = {
         'Back-end mit Java, Python, Django, Flask und Node.js',
         'Cloud-native Infrastruktur mit Kubernetes und Docker',
         'Sicherheit: Pentest, Schwachstellenanalyse, SIEM',
-        'Robuste CI/CD-Pipelines und GitOps',
-        'Front-end-Entwicklung mit React und Vue.js',
+        'Robuste CI/CD-Pipelines und GitOps, GitHub Actions',
+        
       ],
     },
     skills: { tag: 'technologien', title: 'Stack & Skills',
@@ -283,7 +282,7 @@ export const translations = {
         devops: 'DevOps',
         cybersecurity: 'Cibersegurança',
         cloud: 'Cloud & Infra',
-        frontend: 'Front-end',
+        
         tools: 'Ferramentas',
       }, 
     },

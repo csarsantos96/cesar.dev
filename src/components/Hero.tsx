@@ -47,8 +47,8 @@ export default function Hero() {
             <div><span className="t-prompt">➜</span> <span className="t-cmd">whoami</span></div>
             <div className="t-out">César Santos · Back-end &amp; Security Engineer</div>
             <div style={{ marginTop: 8 }}><span className="t-prompt">➜</span> <span className="t-cmd">cat skills.json</span></div>
-            <div><span className="t-key">"backend"</span><span className="t-comment">:</span> <span className="t-val">["Go", "Python", "Node.js"]</span></div>
-            <div><span className="t-key">"devops"</span><span className="t-comment">:</span> <span className="t-val">["Docker", "K8s", "CI/CD"]</span></div>
+            <div><span className="t-key">"backend"</span><span className="t-comment">:</span> <span className="t-val">["Java", "Python", "Node.js"]</span></div>
+            <div><span className="t-key">"devops"</span><span className="t-comment">:</span> <span className="t-val">["Docker", "K8s","GitHub Actions", "CI/CD"]</span></div>
             <div><span className="t-key">"security"</span><span className="t-comment">:</span> <span className="t-val">["Pentest", "SIEM", "IAM"]</span></div>
             <div style={{ marginTop: 8 }}><span className="t-prompt">➜</span> <span className="t-cmd">echo "open to work"</span></div>
             <div className="t-out">open to work</div>
