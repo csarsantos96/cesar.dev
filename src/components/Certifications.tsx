@@ -108,7 +108,7 @@ const certSkillMap: Record<string, SkillKey> = {
   Linux: 'cloud',
 }
 
-const certs: Cert[] = [
+export const certs: Cert[] = [
   {
   badge: 'Docker',
   name: 'Uncomplicating Docker',
