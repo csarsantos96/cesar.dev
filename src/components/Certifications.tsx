@@ -110,6 +110,13 @@ const certSkillMap: Record<string, SkillKey> = {
 
 const certs: Cert[] = [
   {
+  badge: 'Docker',
+  name: 'Uncomplicating Docker',
+  issuer: 'LINUXtips',
+  year: '2026',
+  url: 'https://www.credential.net/4033f97c-52d2-4977-8658-69e3fc411db3',
+},
+  {
     badge: 'Oracle',
     name: 'Oracle Cloud Infrastructure 2025 Certified AI Foundations Associate',
     issuer: 'Oracle',
