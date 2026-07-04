@@ -324,7 +324,7 @@ export const translations = {
     },
     {
       type: 'DEVOPS',
-      name: 'Linux Workspace',
+      name: 'LINUXtips Workspace',
       desc: 'Praktischer Workspace des Linux-für-Cloud-Native-Trainings — SSH-Troubleshooting-Challenges, Mindmaps und Logs eines DevOps-Projekts.',
       stack: ['Linux', 'SSH', 'Networking', 'Cloud Native'],
       liveUrl: null,
