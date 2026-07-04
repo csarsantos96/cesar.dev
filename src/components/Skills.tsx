@@ -47,7 +47,7 @@ const groups: SkillGroup[] = [
     key: 'devops',
     color: '#ff6b35',
     icon: Code2,
-    tags: ['Docker', 'Kubernetes', 'GitHub Actions', 'Jenkins', 'CI/CD','Terraform','Ansible','ArgoCD','Helm' ],
+    tags: ['Docker', 'Kubernetes', 'GitHub Actions', 'Jenkins', 'CI/CD','Terraform','Ansible','ArgoCD','Helm', 'SSH', 'Cloud Native','Linux' ],
   },
   {
     key: 'cybersecurity',
