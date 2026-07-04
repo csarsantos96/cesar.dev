@@ -55,6 +55,14 @@ export const translations = {
           repoUrl: 'https://github.com/csarsantos96/linuxtips-github-actions',
         },
         {
+          type: 'DEVOPS',
+          name: 'LINUXtips Workspace',
+          desc: 'Workspace prático do treinamento Linux para Cloud Native — desafios de troubleshooting SSH, mapas mentais e logs de um projeto DevOps.',
+          stack: ['Linux', 'SSH', 'Networking', 'Cloud Native'],
+          liveUrl: null,
+          repoUrl: 'https://github.com/csarsantos96/linuxtips-workspace',
+        },
+        {
           type: 'BACK-END',
           name: 'BookStore API',
           desc: 'API RESTful para gerenciamento de livraria com autenticação, CRUD completo e deploy no Heroku.',
@@ -178,6 +186,14 @@ export const translations = {
       stack: ['GitHub Actions', 'CI/CD'],
       liveUrl: null,
       repoUrl: 'https://github.com/csarsantos96/linuxtips-github-actions',
+    },
+    {
+      type: 'DEVOPS',
+      name: 'LINUXtips Workspace',
+      desc: 'Hands-on workspace for the Linux para Cloud Native training — SSH troubleshooting challenges, Linux/Cloud Native mind maps, and DevOps project logs.',
+      stack: ['Linux', 'SSH', 'Networking', 'Cloud Native'],
+      liveUrl: null,
+      repoUrl: 'https://github.com/csarsantos96/linuxtips-workspace',
     },
 
     {
@@ -305,6 +321,14 @@ export const translations = {
       stack: ['GitHub Actions', 'CI/CD'],
       liveUrl: null,
       repoUrl: 'https://github.com/csarsantos96/linuxtips-github-actions',
+    },
+    {
+      type: 'DEVOPS',
+      name: 'Linux Workspace',
+      desc: 'Praktischer Workspace des Linux-für-Cloud-Native-Trainings — SSH-Troubleshooting-Challenges, Mindmaps und Logs eines DevOps-Projekts.',
+      stack: ['Linux', 'SSH', 'Networking', 'Cloud Native'],
+      liveUrl: null,
+      repoUrl: 'https://github.com/csarsantos96/linuxtips-workspace',
     },
 
     {
