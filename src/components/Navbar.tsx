@@ -12,6 +12,7 @@ export default function Navbar() {
     { href: '#about', label: nav.about },
     { href: '#skills', label: nav.skills },
     { href: '#projects', label: nav.projects },
+    { href: 'https://commandlinux.dev', label: 'blog' },
     { href: '#certs', label: nav.certs },
     { href: '#resume', label: nav.resume },
     { href: '#contact', label: nav.contact },
