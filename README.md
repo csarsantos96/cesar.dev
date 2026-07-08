@@ -15,7 +15,7 @@ A modern, responsive personal portfolio website built with **React**, **TypeScri
 
 ```text
 src/
-├── components/     # Navbar, Footer, Hero, Skills, Projects, Resume, Certifications, Contact
+├── components/     # Navbar, Footer, Hero, Skills, Projects, Blog, Resume, Certifications, Contact
 ├── context/        # Language context provider (LangContext)
 ├── i18n/           # Translation strings (PT, EN, DE)
 ├── pages/          # Home, NotFound, Error
