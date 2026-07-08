@@ -71,7 +71,7 @@ export const translations = {
           repoUrl: 'https://github.com/csarsantos96/bookstore',
         },
         {
-          type: 'DEVOPS · AI',
+          type: 'DEVOPS',
           name: 'commandlinux.dev',
           desc: 'Blog técnico com pipeline de publicação automatizado: a cada post em Markdown, um workflow do GitHub Actions aciona tradução via LLM e gera as versões multilíngues — do commit ao deploy, sem passos manuais.',
           stack: ['Astro', 'GitHub Actions', 'CI/CD', 'LLM', 'Vercel'],
@@ -213,7 +213,7 @@ export const translations = {
       repoUrl: 'https://github.com/csarsantos96/bookstore',
     },
     {
-      type: 'DEVOPS · AI',
+      type: 'DEVOPS',
       name: 'commandlinux.dev',
       desc: 'Technical blog with an automated publishing pipeline: on every new Markdown post, a GitHub Actions workflow triggers LLM-powered translation and generates multilingual versions — from commit to deploy, zero manual steps.',
       stack: ['Astro', 'GitHub Actions', 'CI/CD', 'LLM', 'Vercel'],
@@ -356,7 +356,7 @@ export const translations = {
       repoUrl: 'https://github.com/csarsantos96/bookstore',
     },
     {
-      type: 'DEVOPS · AI',
+      type: 'DEVOPS',
       name: 'commandlinux.dev',
       desc: 'Technischer Blog mit automatisierter Publishing-Pipeline: Bei jedem neuen Markdown-Beitrag löst ein GitHub-Actions-Workflow eine LLM-basierte Übersetzung aus und erzeugt mehrsprachige Versionen — vom Commit bis zum Deploy, ganz ohne manuelle Schritte.',
       stack: ['Astro', 'GitHub Actions', 'CI/CD', 'LLM', 'Vercel'],
