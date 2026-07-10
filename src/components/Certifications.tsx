@@ -105,10 +105,17 @@ const certSkillMap: Record<string, SkillKey> = {
   Cisco: 'cybersecurity',
   OSEP: 'cybersecurity',
 
-  Linux: 'cloud',
+  Linux: 'devops',
 }
 
 export const certs: Cert[] = [
+    {
+    badge: 'AWS',
+    name: 'AWS Cloud Fundamentals',
+    issuer: 'AWS Treina Brasil · TIDWIT',
+    year: '2026',
+    url: 'Chttps://awstreinabrasil.ontidwit.com/badge?id=eb5de4e8-3908-45e7-80da-a1ecd90583ee',
+  },
   {
   badge: 'Docker',
   name: 'Uncomplicating Docker',
