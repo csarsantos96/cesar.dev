@@ -109,12 +109,20 @@ const certSkillMap: Record<string, SkillKey> = {
 }
 
 export const certs: Cert[] = [
-    {
+
+  {
+    badge: 'DEVOPS',
+    name: 'Creating Pipelines and Automations with GitHub Actions',
+    issuer: 'LINUXtips',
+    year: '2026',
+    url: 'https://www.credential.net/e38bee5c-e847-4b50-b4b5-304375a8af9c',
+  },
+  {
     badge: 'AWS',
     name: 'AWS Cloud Fundamentals',
     issuer: 'AWS Treina Brasil · TIDWIT',
     year: '2026',
-    url: 'Chttps://awstreinabrasil.ontidwit.com/badge?id=eb5de4e8-3908-45e7-80da-a1ecd90583ee',
+    url: 'https://awstreinabrasil.ontidwit.com/badge?id=eb5de4e8-3908-45e7-80da-a1ecd90583ee',
   },
   {
   badge: 'Docker',
