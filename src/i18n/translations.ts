@@ -30,9 +30,11 @@ export const translations = {
         devops: 'DevOps',
         cybersecurity: 'Cibersegurança',
         cloud: 'Cloud & Infra',
-        
+
         tools: 'Ferramentas',
-      }, 
+      },
+      learning: 'Em aprendizado',
+      learningLegend: 'Em aprendizado',
     },
     projects: {
       tag: 'portfólio',
@@ -173,7 +175,9 @@ export const translations = {
         cybersecurity: 'Cibersegurança',
         cloud: 'Cloud & Infra',
         tools: 'Ferramentas',
-      }, 
+      },
+      learning: 'Currently learning',
+      learningLegend: 'Currently learning',
     },
     projects: {
   tag: 'portfolio',
@@ -314,9 +318,11 @@ export const translations = {
         devops: 'DevOps',
         cybersecurity: 'Cibersegurança',
         cloud: 'Cloud & Infra',
-        
+
         tools: 'Ferramentas',
-      }, 
+      },
+      learning: 'Wird gerade gelernt',
+      learningLegend: 'Wird gerade gelernt',
     },
     projects: {
   tag: 'portfolio',
