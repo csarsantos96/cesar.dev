@@ -1,0 +1,61 @@
+---
+import './Navbar.css';
+const { t, lang } = Astro.props;
+const nav = t.nav;
+// PT vive em "/", EN em "/en"
+const homeHref = lang === 'pt' ? '/' : '/en';
+const links = [
+  { href: '#about', label: nav.about },
+  { href: '#skills', label: nav.skills },
+  { href: '#projects', label: nav.projects },
+  { href: 'https://commandlinux.dev', label: 'blog' },
+  { href: '#certs', label: nav.certs },
+  { href: '#resume', label: nav.resume },
+  { href: '#contact', label: nav.contact },
+];
+const langs: { code: string; href: string }[] = [
+  { code: 'PT', href: '/' },
+  { code: 'EN', href: '/en' },
+];
+---
+<nav class="navbar">
+  <a href={homeHref} class="nav-logo">
+    <span class="nav-prefix">~/ </span>
+    <span class="nav-icon">&gt;_ </span>
+    cesarsantos.dev<span class="nav-cursor" />
+  </a>
+
+  <ul class="nav-links" data-nav-links>
+    {links.map((l) => (
+      <li><a href={l.href} data-nav-link>{l.label}</a></li>
+    ))}
+  </ul>
+
+  <div class="nav-actions">
+    <div class="lang-switcher">
+      {langs.map((l) => (
+        <a href={l.href} class={`lang-btn${lang.toUpperCase() === l.code ? ' active' : ''}`}>{l.code}</a>
+      ))}
+    </div>
+
+    <button class="menu-toggle" data-menu-toggle aria-label="Abrir menu" aria-expanded="false" type="button">
+      <span /><span /><span />
+    </button>
+  </div>
+</nav>
+
+<script>
+  const toggle = document.querySelector('[data-menu-toggle]');
+  const list = document.querySelector('[data-nav-links]');
+  const close = () => {
+    list?.classList.remove('open');
+    toggle?.classList.remove('open');
+    toggle?.setAttribute('aria-expanded', 'false');
+  };
+  toggle?.addEventListener('click', () => {
+    const open = list?.classList.toggle('open');
+    toggle.classList.toggle('open', open);
+    toggle.setAttribute('aria-expanded', String(!!open));
+  });
+  document.querySelectorAll('[data-nav-link]').forEach((a) => a.addEventListener('click', close));
+</script>

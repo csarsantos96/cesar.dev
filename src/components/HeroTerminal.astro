@@ -1,0 +1,83 @@
+---
+// Terminal do hero. Marcação estática + script client-side (sem React).
+---
+<div class="terminal">
+  <div class="terminal-bar">
+    <span class="t-dot t-red" />
+    <span class="t-dot t-yellow" />
+    <span class="t-dot t-green" />
+    <span class="terminal-title">cesar@cesarsantos.dev — zsh</span>
+  </div>
+  <div class="terminal-body">
+    <div><span class="t-prompt">→</span> <span class="t-cmd">whoami</span></div>
+    <div class="t-out">César Santos · Software Engineer (Backend)</div>
+
+    <div style="margin-top:8px"><span class="t-prompt">→</span> <span class="t-cmd">cat stack.json</span></div>
+    <div><span class="t-key">"backend"</span><span class="t-comment">:</span> <span class="t-val">["Python", "FastAPI", "Django", "PostgreSQL"]</span></div>
+
+    <div style="margin-top:8px"><span class="t-prompt">→</span> <span class="t-cmd">cat goals.txt</span></div>
+    <div class="t-out"><span style="color:var(--t-green,#34d399)">→</span> Security Engineering</div>
+    <div class="t-out"><span style="color:var(--t-green,#34d399)">→</span> DevOps / SRE</div>
+
+    <div style="margin-top:8px"><span class="t-prompt">→</span> <span class="t-cmd">cert-path --status</span></div>
+    <div class="t-comment">// studying via LINUXtips guide</div>
+    <div class="t-out" style="white-space:pre">CKAD  <span style="color:var(--t-yellow,#fbbf24)">[▓░░░░░░░░░]</span> <span style="color:var(--t-yellow,#fbbf24)">next</span></div>
+    <div class="t-out" style="white-space:pre">CKA   <span style="color:var(--t-muted,#7c6f8f)">[░░░░░░░░░░]</span> <span style="color:var(--t-muted,#7c6f8f)">planned</span></div>
+    <div class="t-out" style="white-space:pre">KCNA  <span style="color:var(--t-muted,#7c6f8f)">[░░░░░░░░░░]</span> <span style="color:var(--t-muted,#7c6f8f)">planned</span></div>
+    <div class="t-out" style="white-space:pre">KCSA  <span style="color:var(--t-muted,#7c6f8f)">[░░░░░░░░░░]</span> <span style="color:var(--t-muted,#7c6f8f)">planned</span></div>
+    <div class="t-out" style="white-space:pre">CKS   <span style="color:var(--t-muted,#7c6f8f)">[░░░░░░░░░░]</span> <span style="color:var(--t-muted,#7c6f8f)">planned</span></div>
+
+    <div style="margin-top:8px"><span class="t-prompt">→</span> <span class="t-cmd">echo "open to work"</span></div>
+    <div class="t-out">open to work</div>
+
+    <div style="margin-top:8px"><span class="t-prompt">→</span> <span class="t-cmd">tail -f /var/log/api.log</span></div>
+    <div id="log-tail" data-log-tail></div>
+  </div>
+</div>
+
+<script>
+  const ENDPOINTS = [
+    { method: 'GET', path: '/api/v1/health', status: 200, tag: 'info' },
+    { method: 'POST', path: '/api/v1/auth/token', status: 201, tag: 'info' },
+    { method: 'POST', path: '/api/v1/transcribe', status: 202, tag: 'info' },
+    { method: 'GET', path: '/api/v1/embeddings/query', status: 200, tag: 'info' },
+    { method: 'DELETE', path: '/api/v1/sessions/e91c', status: 204, tag: 'warn' },
+    { method: 'GET', path: '/api/v1/metrics', status: 200, tag: 'info' },
+  ];
+  const TAG_COLOR: Record<string, string> = {
+    info: 'var(--accent, #c084fc)', warn: 'var(--t-yellow, #fbbf24)', error: 'var(--t-red, #f87171)',
+  };
+  function makeLine() {
+    const e = ENDPOINTS[Math.floor(Math.random() * ENDPOINTS.length)];
+    return { ts: new Date().toISOString(), ...e, ms: (Math.random() * 90 + 4).toFixed(1) };
+  }
+  function render(host: HTMLElement, lines: any[]) {
+    host.innerHTML = lines.map((l, i) => {
+      const newest = i === lines.length - 1;
+      return `<div class="t-out" style="white-space:nowrap;opacity:${newest ? 1 : 0.5};transition:opacity 0.4s ease">`
+        + `<span style="opacity:0.55">[${l.ts}]</span> `
+        + `<span style="color:${TAG_COLOR[l.tag]}">[${l.tag}]</span> `
+        + `<span style="font-weight:600">${l.method}</span> ${l.path} `
+        + `<span style="opacity:0.5">${l.status}</span> `
+        + `<span style="opacity:0.55">${l.ms}ms</span>`
+        + (newest ? '<span class="cursor"></span>' : '')
+        + `</div>`;
+    }).join('');
+  }
+  const host = document.querySelector('[data-log-tail]') as HTMLElement | null;
+  if (host) {
+    let lines = Array.from({ length: 3 }, makeLine);
+    render(host, lines);
+    let paused = false;
+    host.addEventListener('mouseenter', () => (paused = true));
+    host.addEventListener('mouseleave', () => (paused = false));
+    const reduce = window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
+    if (!reduce) {
+      setInterval(() => {
+        if (paused) return;
+        lines = [...lines.slice(-3), makeLine()];
+        render(host, lines);
+      }, 1100);
+    }
+  }
+</script>

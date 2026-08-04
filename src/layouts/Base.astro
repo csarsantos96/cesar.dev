@@ -1,0 +1,55 @@
+---
+import '../styles/global.css';
+import Navbar from '../components/Navbar.astro';
+import Hero from '../components/Hero.astro';
+import About from '../components/About.astro';
+import Skills from '../components/Skills.astro';
+import Projects from '../components/Projects.astro';
+import Certifications from '../components/Certifications.astro';
+import Resume from '../components/Resume.astro';
+import Contact from '../components/Contact.astro';
+import Footer from '../components/Footer.astro';
+import { translations, type Lang } from '../lib/i18n';
+
+const { lang } = Astro.props as { lang: Lang };
+const t = translations[lang];
+const title = lang === 'pt' ? 'César Santos — Engenheiro Backend' : 'César Santos — Backend Engineer';
+---
+<!doctype html>
+<html lang={lang === 'pt' ? 'pt-BR' : 'en'}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={t.hero.desc} />
+    <link rel="alternate" hreflang="pt-BR" href="https://cesarsantos.dev/" />
+    <link rel="alternate" hreflang="en" href="https://cesarsantos.dev/en" />
+  </head>
+  <body>
+    <Navbar t={t} lang={lang} />
+    <main>
+      <Hero t={t} lang={lang} />
+      <div class="section-divider" />
+      <About t={t} lang={lang} />
+      <div class="section-divider" />
+      <Skills t={t} lang={lang} />
+      <div class="section-divider" />
+      <Projects t={t} lang={lang} />
+      <div class="section-divider" />
+      <Certifications t={t} lang={lang} />
+      <div class="section-divider" />
+      <Resume t={t} lang={lang} />
+      <div class="section-divider" />
+      <Contact t={t} lang={lang} />
+    </main>
+    <Footer />
+
+    <script>
+      const observer = new IntersectionObserver(
+        (entries) => entries.forEach((e) => { if (e.isIntersecting) e.target.classList.add('visible'); }),
+        { threshold: 0.1 }
+      );
+      document.querySelectorAll('.fade-in').forEach((el) => observer.observe(el));
+    </script>
+  </body>
+</html>

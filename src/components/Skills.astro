@@ -1,0 +1,36 @@
+---
+import Icon from './Icon.astro';
+import { skillGroups } from '../lib/data';
+import './Skills.css';
+const { t } = Astro.props;
+const s = t.skills;
+---
+<section id="skills" class="section-wrap">
+  <div class="section-tag">{s.tag}</div>
+  <h2 class="section-title">{s.title}</h2>
+
+  <div class="skills-grid fade-in">
+    {skillGroups.map((group) => (
+      <article class="skill-group" style={`--group-color: ${group.color}`}>
+        <div class="skill-group-header">
+          <div class="skill-group-icon"><Icon name={group.icon} size={18} /></div>
+          <div class="skill-group-title-wrap">
+            <h3 class="skill-group-title">{s.groups[group.key]}</h3>
+          </div>
+        </div>
+        <div class="skill-tags">
+          {group.tags.map((tag) => (
+            <span class={`skill-tag${tag.learning ? ' is-learning' : ''}`} title={tag.learning ? s.learning : undefined}>
+              {tag.learning && <span class="skill-tag-dot" aria-hidden="true" />}
+              {tag.name}
+            </span>
+          ))}
+        </div>
+      </article>
+    ))}
+  </div>
+
+  <p class="skills-legend">
+    <span class="skill-tag-dot" aria-hidden="true" /> {s.learningLegend}
+  </p>
+</section>

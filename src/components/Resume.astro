@@ -1,0 +1,56 @@
+---
+import Icon from './Icon.astro';
+import { cvFiles } from '../lib/data';
+import './Resume.css';
+const { t, lang } = Astro.props;
+const r = t.resume;
+const cvUrl = cvFiles[lang] ?? '/cv-en.pdf';
+---
+<section id="resume" class="section-wrap">
+  <div class="section-tag">{r.tag}</div>
+  <h2 class="section-title">{r.title}</h2>
+
+  <div class="resume-block fade-in">
+    <div class="resume-col">
+      <div class="resume-col-title with-icon">
+        <span class="resume-col-icon"><Icon name="briefcase-business" size={16} /></span>
+        {r.expLabel}
+      </div>
+      <div class="timeline-list">
+        {r.experience.map((item, i: number) => (
+          <article class={`timeline-item ${i === 0 ? 'is-current' : ''}`}>
+            <div class="timeline-dot" />
+            <div class="timeline-date">{item.date}</div>
+            <div class="timeline-title">{item.title}</div>
+            <div class="timeline-company">{item.company}</div>
+            <div class="timeline-desc">{item.desc}</div>
+          </article>
+        ))}
+      </div>
+    </div>
+
+    <div class="resume-col">
+      <div class="resume-col-title with-icon">
+        <span class="resume-col-icon"><Icon name="graduation-cap" size={16} /></span>
+        {r.eduLabel}
+      </div>
+      <div class="timeline-list">
+        {r.education.map((item) => (
+          <article class="timeline-item education-item">
+            <div class="timeline-dot" />
+            <div class="timeline-date">{item.date}</div>
+            <div class="timeline-title">{item.title}</div>
+            <div class="timeline-company">{item.company}</div>
+            <div class="timeline-desc">{item.desc}</div>
+          </article>
+        ))}
+      </div>
+      <div class="resume-download">
+        <a href={cvUrl} download class="btn-primary resume-btn">
+          <Icon name="download" size={14} />
+          {r.download}
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
