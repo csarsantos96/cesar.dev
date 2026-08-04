@@ -4,7 +4,6 @@ import {
   Cloud,
   Code2,
   Lock,
-  
   ServerCog,
   Wrench,
 } from 'lucide-react'
@@ -19,53 +18,75 @@ type SkillGroupKey =
   | 'cloud'
   | 'tools'
 
+type Skill = { name: string; learning?: boolean }
+
 type SkillGroup = {
   key: SkillGroupKey
   color: string
   icon: ElementType
-  tags: string[]
+  tags: Skill[]
 }
 
 type SkillGroupStyle = CSSProperties & {
   '--group-color': string
 }
 
+// learning: true  -> skill you're currently studying (dot + dimmed)
 const groups: SkillGroup[] = [
   {
     key: 'backend',
     color: '#00d4ff',
     icon: ServerCog,
-    tags: ['Java', 'Python', 'Django', 'Flask', 'C', 'Node.js', 'REST APIs', 'GraphQL', 'gRPC', 'PostgreSQL', 'Redis', 'MongoDB'],
+    tags: [
+      { name: 'Java' }, { name: 'Python' }, { name: 'Django' }, { name: 'Flask' },
+      { name: 'C' }, { name: 'Node.js' }, { name: 'REST APIs' }, { name: 'GraphQL' },
+      { name: 'gRPC' }, { name: 'PostgreSQL' }, { name: 'Redis' }, { name: 'MongoDB' },
+    ],
   },
   {
     key: 'ai',
     color: '#a78bfa',
     icon: Brain,
-    tags: ['WhisperX', 'CUDA', 'Pandas', 'NumPy', 'Seaborn'],
+    tags: [
+      { name: 'WhisperX' }, { name: 'CUDA' }, { name: 'Pandas' },
+      { name: 'NumPy' }, { name: 'Seaborn' },
+    ],
   },
   {
     key: 'devops',
     color: '#ff6b35',
     icon: Code2,
-    tags: ['Docker', 'Kubernetes', 'GitHub Actions', 'Jenkins', 'CI/CD','Terraform','Ansible','ArgoCD','Helm', 'SSH', 'Cloud Native','Linux' ],
+    tags: [
+      { name: 'Docker' }, { name: 'CI/CD' }, { name: 'Linux' },
+      { name: 'Kubernetes' }, { name: 'Terraform', learning: true },
+    ],
   },
   {
     key: 'cybersecurity',
     color: '#ffffff',
     icon: Lock,
-    tags: ['Pentest', 'Burp Suite', 'Metasploit', 'Nmap'],
+    tags: [
+      { name: 'Pentest', learning: true }, { name: 'Burp Suite', learning: true },
+      { name: 'Metasploit', learning: true }, { name: 'Nmap', learning: true },
+    ],
   },
   {
     key: 'cloud',
     color: '#fbbf24',
     icon: Cloud,
-    tags: ['AWS', 'GCP', 'Linux', 'Nginx', 'OCI - Oracle Cloud'],
+    tags: [
+      { name: 'OCI - Oracle Cloud' }, { name: 'Linux' }, { name: 'Nginx' },
+      { name: 'AWS', learning: true }, { name: 'GCP', learning: true }, { name: 'Azure', learning: true },
+    ],
   },
   {
     key: 'tools',
     color: '#f472b6',
     icon: Wrench,
-    tags: ['Git', 'Bash/Shell', 'Wireshark', 'Postman', 'Swagger', 'Jira', 'Notion'],
+    tags: [
+      { name: 'Git' }, { name: 'SSH' }, { name: 'Bash/Shell' }, { name: 'Wireshark' },
+      { name: 'Postman' }, { name: 'Swagger' }, { name: 'Jira' }, { name: 'Notion' },
+    ],
   },
 ]
 
@@ -100,8 +121,13 @@ export default function Skills() {
 
               <div className="skill-tags">
                 {group.tags.map((tag) => (
-                  <span className="skill-tag" key={tag}>
-                    {tag}
+                  <span
+                    className={`skill-tag${tag.learning ? ' is-learning' : ''}`}
+                    key={tag.name}
+                    title={tag.learning ? s.learning : undefined}
+                  >
+                    {tag.learning && <span className="skill-tag-dot" aria-hidden="true" />}
+                    {tag.name}
                   </span>
                 ))}
               </div>
@@ -109,6 +135,10 @@ export default function Skills() {
           )
         })}
       </div>
+
+      <p className="skills-legend">
+        <span className="skill-tag-dot" aria-hidden="true" /> {s.learningLegend}
+      </p>
     </section>
   )
 }
