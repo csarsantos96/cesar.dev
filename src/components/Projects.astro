@@ -1,0 +1,34 @@
+---
+import { projectTypeColors } from '../lib/data';
+import './Projects.css';
+const { t } = Astro.props;
+const p = t.projects;
+---
+<section id="projects" class="section-wrap">
+  <div class="section-tag">{p.tag}</div>
+  <h2 class="section-title">{p.title}</h2>
+
+  <div class="projects-grid fade-in">
+    {p.items.map((proj) => (
+      <article class="project-card" style={`--project-color: ${projectTypeColors[proj.type] ?? '#3a3a3a'}`}>
+        <div class="project-header">
+          <span class="project-type">{proj.type}</span>
+          <span class="project-arrow">↗</span>
+        </div>
+        <h3 class="project-name">{proj.name}</h3>
+        <p class="project-desc">{proj.desc}</p>
+        <div class="project-stack">
+          {proj.stack.map((st) => <span class="stack-tag">{st}</span>)}
+        </div>
+        <div class="project-links">
+          {proj.liveUrl && (
+            <a href={proj.liveUrl} target="_blank" rel="noreferrer" class="btn-primary">Live Site ↗</a>
+          )}
+          {proj.repoUrl && proj.repoUrl !== '#' && (
+            <a href={proj.repoUrl} target="_blank" rel="noreferrer" class="btn-outline project-btn">Source Code ⌥</a>
+          )}
+        </div>
+      </article>
+    ))}
+  </div>
+</section>

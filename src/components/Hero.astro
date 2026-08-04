@@ -1,0 +1,36 @@
+---
+import HeroTerminal from './HeroTerminal.astro';
+import { certs } from '../lib/data';
+import './Hero.css';
+const { t } = Astro.props;
+const h = t.hero;
+const s = t.stats;
+---
+<section id="hero" class="hero">
+  <div class="hero-left fade-in">
+    <div class="hero-status">
+      <span class="status-dot" />
+      {h.status}
+    </div>
+    <div class="hero-avatar">
+      <img src="/image/avatar.jpeg" alt="César Santos" />
+    </div>
+    <h1 class="hero-name">César<br /><span class="accent">Santos</span></h1>
+    <p class="hero-title">{h.title}</p>
+    <p class="hero-desc">{h.desc}</p>
+    <div class="hero-ctas">
+      <a href="#projects" class="btn-primary">{h.cta1}</a>
+      <a href="#contact" class="btn-outline">{h.cta2}</a>
+    </div>
+  </div>
+
+  <div class="hero-right fade-in" style="transition-delay:0.15s">
+    <div class="stats-grid">
+      <div class="stat-card"><div class="stat-num">5+</div><div class="stat-label">{s.s1}</div></div>
+      <div class="stat-card"><div class="stat-num">12+</div><div class="stat-label">{s.s2}</div></div>
+      <div class="stat-card"><div class="stat-num">{certs.length}</div><div class="stat-label">{s.s3}</div></div>
+      <div class="stat-card"><div class="stat-num">3</div><div class="stat-label">{s.s4}</div></div>
+    </div>
+    <HeroTerminal />
+  </div>
+</section>

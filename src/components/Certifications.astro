@@ -1,0 +1,50 @@
+---
+import Icon from './Icon.astro';
+import { certs, certSkillMap, skillColors, type SkillKey } from '../lib/data';
+import './Certifications.css';
+const { t } = Astro.props;
+const c = t.certs;
+
+function certIcon(skill: SkillKey): string {
+  if (skill === 'cloud') return 'cloud';
+  if (skill === 'devops') return 'code-2';
+  if (skill === 'cybersecurity') return 'shield-check';
+  if (skill === 'backend') return 'server-cog';
+  if (skill === 'tools') return 'wrench';
+  return 'award';
+}
+---
+<section id="certs" class="section-wrap">
+  <div class="section-tag">{c.tag}</div>
+  <h2 class="section-title">{c.title}</h2>
+
+  <div class="certs-list fade-in">
+    {certs.map((cert) => {
+      const skill = certSkillMap[cert.badge] ?? 'tools';
+      const color = skillColors[skill];
+      const iconName = certIcon(skill);
+      const Wrapper = cert.url ? 'a' : 'div';
+      const style = `--cert-bg: ${color.bg}; --cert-border: ${color.border}; --cert-color: ${color.color}; --cert-glow: ${color.glow}`;
+      return (
+        <Wrapper
+          class={`cert-item${cert.url ? ' cert-link' : ''}`}
+          style={style}
+          {...(cert.url ? { href: cert.url, target: '_blank', rel: 'noreferrer' } : {})}
+        >
+          <div class="cert-badge"><Icon name={iconName} size={16} /></div>
+          <div class="cert-info">
+            <div class="cert-topline">
+              <span class="cert-issuer-pill">{cert.issuer}</span>
+              <span class="cert-year mobile-year">{cert.year}</span>
+            </div>
+            <div class="cert-name">{cert.name}</div>
+          </div>
+          <div class="cert-meta">
+            <div class="cert-year">{cert.year}</div>
+            {cert.url && <div class="cert-arrow"><Icon name="external-link" size={16} /></div>}
+          </div>
+        </Wrapper>
+      );
+    })}
+  </div>
+</section>

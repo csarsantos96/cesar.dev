@@ -1,0 +1,42 @@
+---
+import Icon from './Icon.astro';
+import { contactItems } from '../lib/data';
+import './Contact.css';
+const { t } = Astro.props;
+const c = t.contact;
+---
+<section id="contact" class="section-wrap">
+  <div class="section-tag">{c.tag}</div>
+  <h2 class="section-title">{c.title}</h2>
+
+  <div class="contact-grid fade-in">
+    <div class="contact-left">
+      <div class="contact-label">{c.open}</div>
+      <h3 class="contact-big">{c.msg}</h3>
+      <p class="contact-sub">{c.sub}</p>
+    </div>
+
+    <div class="contact-right">
+      {contactItems.map((item) => {
+        const isMail = item.href.startsWith('mailto:');
+        return (
+          <a
+            href={item.href}
+            target={isMail ? undefined : '_blank'}
+            rel={isMail ? undefined : 'noreferrer'}
+            class="contact-link-card"
+          >
+            <div class="contact-link-left">
+              <div class="contact-link-icon"><Icon name={item.icon} size={16} /></div>
+              <div class="contact-link-texts">
+                <span class="contact-link-label">{item.label}</span>
+                <span class="contact-link-value">{item.value}</span>
+              </div>
+            </div>
+            <div class="contact-link-arrow"><Icon name="external-link" size={16} /></div>
+          </a>
+        );
+      })}
+    </div>
+  </div>
+</section>

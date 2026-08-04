@@ -1,0 +1,44 @@
+---
+import Icon from './Icon.astro';
+import './About.css';
+const { t } = Astro.props;
+const a = t.about;
+---
+<section id="about" class="section-wrap">
+  <div class="section-tag">{a.tag}</div>
+  <h2 class="section-title">{a.title}</h2>
+
+  <div class="about-grid fade-in">
+    <div class="about-photo-col">
+      <div class="about-photo-card">
+        <div class="about-photo">
+          <img src="/image/avatar.jpeg" alt="César Santos" />
+        </div>
+
+        <div class="about-identity">
+          <span class="about-name">César Santos</span>
+          <span class="about-role">Back-end · DevOps · Security</span>
+          <span class="about-photo-label">cesarsantos.dev</span>
+        </div>
+
+        <div class="about-social">
+          <a href="https://github.com/csarsantos96" target="_blank" rel="noreferrer" class="social-btn" aria-label="GitHub"><Icon name="github" size={14} /></a>
+          <a href="https://www.linkedin.com/in/cesar-augusto-dos-santos/?locale=en-US" target="_blank" rel="noreferrer" class="social-btn" aria-label="LinkedIn"><Icon name="linkedin" size={14} /></a>
+          <a href="mailto:hello@cesarsantos.dev" class="social-btn" aria-label="Email"><Icon name="mail" size={16} /></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="about-text-col">
+      <p class="about-bio">{a.bio}</p>
+      <div class="about-focus-grid">
+        {a.focus.map((item: string) => (
+          <div class="focus-card">
+            <span class="focus-dot" />
+            <span class="focus-text">{item}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
