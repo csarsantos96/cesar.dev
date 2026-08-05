@@ -20,7 +20,7 @@ export const skillGroups: SkillGroup[] = [
   },
   {
     key: 'devops', color: '#ff6b35', icon: 'code-2',
-    tags: [{ name: 'Docker' }, { name: 'CI/CD' }, { name: 'Linux' }, { name: 'Kubernetes' }, { name: 'Terraform', learning: true }],
+    tags: [{ name: 'Docker' }, { name: 'CI/CD' }, { name: 'Linux' }, { name: 'Kubernetes' }, { name: 'Terraform', learning: true }, { name: 'ArgoCD', learning: true }, { name: 'Helm', learning: true }],
   },
   {
     key: 'cybersecurity', color: '#ffffff', icon: 'lock',

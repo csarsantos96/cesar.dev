@@ -44,6 +44,10 @@ const title = lang === 'pt' ? 'César Santos — Engenheiro Backend' : 'César S
     </main>
     <Footer />
 
+    <script define:vars={{ lang }} is:inline>
+      document.cookie = `lang=${lang}; path=/; max-age=31536000; samesite=lax`;
+    </script>
+
     <script>
       const observer = new IntersectionObserver(
         (entries) => entries.forEach((e) => { if (e.isIntersecting) e.target.classList.add('visible'); }),
