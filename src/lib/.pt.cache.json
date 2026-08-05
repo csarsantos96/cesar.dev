@@ -1,0 +1,190 @@
+{
+  "nav": {
+    "about": "sobre",
+    "skills": "skills",
+    "projects": "projetos",
+    "certs": "certs",
+    "resume": "currículo",
+    "contact": "contato"
+  },
+  "hero": {
+    "status": "disponível para oportunidades",
+    "title": "Back-end · DevOps · Security Engineer",
+    "desc": "Construindo sistemas resilientes, pipelines seguros e infraestrutura escalável. Especializado em Back-end, DevOps, DevSecOps e Cybersecurity.",
+    "cta1": "Ver projetos",
+    "cta2": "Entrar em contato"
+  },
+  "stats": {
+    "s1": "anos de experiência",
+    "s2": "projetos entregues",
+    "s3": "certificações",
+    "s4": "idiomas"
+  },
+  "about": {
+    "tag": "sobre mim",
+    "title": "Quem sou eu",
+    "bio": "Sou um engenheiro de software focado em construir soluções escaláveis e seguras com impacto real. Minha experiência combina desenvolvimento back-end, infraestrutura cloud-native e cibersegurança, seguindo uma abordagem DevSecOps. Já atuei no desenvolvimento de sistemas orientados a dados, pipelines de automação e projetos com IA, sempre buscando performance, confiabilidade e segurança.",
+    "focus": [
+      "Back-end com Java, Python, Django, Flask e Node.js",
+      "Infraestrutura cloud-native com Kubernetes e Docker",
+      "Segurança: pentest, análise de vulnerabilidades, SIEM",
+      "Pipelines CI/CD robustos e GitOps, GitHub Actions"
+    ]
+  },
+  "skills": {
+    "tag": "tecnologias",
+    "title": "Stack & Skills",
+    "learning": "estudando atualmente",
+    "learningLegend": "estudando atualmente",
+    "groups": {
+      "backend": "Back-end",
+      "ai": "IA & ML",
+      "devops": "DevOps",
+      "cybersecurity": "Cibersegurança",
+      "cloud": "Cloud & Infra",
+      "tools": "Ferramentas"
+    }
+  },
+  "projects": {
+    "tag": "portfólio",
+    "title": "Projetos",
+    "items": [
+      {
+        "type": "DATA SCIENCE",
+        "name": "NFLStatsLab",
+        "desc": "Análise de 20 anos de dados da NFL (2003–2023). ETL, Exploratory Data Analysis e visualizações com Pandas, NumPy e Seaborn.",
+        "stack": [
+          "Python",
+          "Pandas",
+          "NumPy",
+          "Seaborn",
+          "Git"
+        ],
+        "liveUrl": null,
+        "repoUrl": "https://github.com/csarsantos96/BigData"
+      },
+      {
+        "type": "DEVOPS",
+        "name": "Primeiro Workflow com Github Actions",
+        "desc": "Pipeline simples de CI/CD com GitHub Actions para automatizar validações, testar o workflow e entender a base de automações em projetos DevOps.",
+        "stack": [
+          "GitHub Actions",
+          "CI/CD"
+        ],
+        "liveUrl": null,
+        "repoUrl": "https://github.com/csarsantos96/linuxtips-github-actions"
+      },
+      {
+        "type": "DEVOPS",
+        "name": "LINUXtips Workspace",
+        "desc": "Workspace prático do treinamento Linux para Cloud Native — desafios de troubleshooting SSH, mapas mentais e logs de um projeto DevOps.",
+        "stack": [
+          "Linux",
+          "SSH",
+          "Networking",
+          "Cloud Native"
+        ],
+        "liveUrl": null,
+        "repoUrl": "https://github.com/csarsantos96/linuxtips-workspace"
+      },
+      {
+        "type": "BACK-END",
+        "name": "BookStore API",
+        "desc": "API RESTful para gerenciamento de livraria com autenticação, CRUD completo e deploy no Heroku.",
+        "stack": [
+          "Python",
+          "Django",
+          "PostgreSQL",
+          "Postman"
+        ],
+        "liveUrl": null,
+        "repoUrl": "https://github.com/csarsantos96/bookstore"
+      },
+      {
+        "type": "DEVOPS",
+        "name": "commandlinux.dev",
+        "desc": "Blog técnico com pipeline de publicação automatizado: a cada post em Markdown, um workflow do GitHub Actions aciona tradução via LLM e gera as versões multilíngues — do commit ao deploy, sem passos manuais.",
+        "stack": [
+          "Astro",
+          "GitHub Actions",
+          "CI/CD",
+          "LLM",
+          "Vercel"
+        ],
+        "liveUrl": "https://commandlinux.dev",
+        "repoUrl": "https://github.com/csarsantos96/commandlinux-blog"
+      }
+    ]
+  },
+  "certs": {
+    "tag": "certificações",
+    "title": "Certificações"
+  },
+  "resume": {
+    "tag": "currículo",
+    "title": "Experiência & Educação",
+    "expLabel": "// experiência",
+    "eduLabel": "// educação",
+    "present": "Presente",
+    "download": " Baixar CV (PDF)",
+    "experience": [
+      {
+        "date": "Out 2025 — Maio 2026",
+        "title": "Software Engineer",
+        "company": "SONDA — Tribunal de Justiça do Acre",
+        "desc": "Arquitetei pipeline de transcrição jurídica com diarização (WhisperX + CUDA, GPU NVIDIA A2000) em ambiente offline. Projetei backend Flask completo para sistema de licitação assistida por IA com Keycloak + JWT, integração LLM e cobertura pytest. Modernizei o Sistema Vera com views PostgreSQL otimizadas. Liderança técnica interina de equipe mista dev + suporte N1/N2."
+      },
+      {
+        "date": "Mar 2024 — Out 2024",
+        "title": "Desenvolvedor de Software",
+        "company": "Iteracre — Instituto de Terras do Acre",
+        "desc": "Desenvolvimento do Sistema de Cadastro Fundiário do Estado com PHP e CakePHP, automatizando demarcação de terras e emissão de títulos. Gerenciamento de ambientes conteinerizados com Docker."
+      },
+      {
+        "date": "Set 2022 — Dez 2022",
+        "title": "Analista de Dados / Web Developer",
+        "company": "XLand Holding — Remoto",
+        "desc": "Desenvolvimento web com PHP e Laravel, suporte técnico de TI e gestão de bancos de dados SQL com foco em integridade e relatórios de BI."
+      },
+      {
+        "date": "Fev 2019 — Ago 2022",
+        "title": "Chefe da Divisão de T.I",
+        "company": "Governo do Estado do Acre — SASDHM",
+        "desc": "Liderança de suporte de TI e governança na Secretaria de Direitos Humanos. Digitalização de fluxos de trabalho e estruturação de ambiente virtual de suporte técnico."
+      }
+    ],
+    "education": [
+      {
+        "date": "2021 — Jul 2025",
+        "title": "Bacharelado em Sistemas de Informação",
+        "company": "Estácio Unimeta",
+        "desc": "Conclusão prevista para julho de 2025."
+      },
+      {
+        "date": "Ago 2025",
+        "title": "Pós-graduação em Cibersegurança — Red Team",
+        "company": "FIAP",
+        "desc": "Especialização em segurança ofensiva, pentest e Red Team."
+      }
+    ]
+  },
+  "contact": {
+    "tag": "contato",
+    "title": "Vamos conversar",
+    "open": "Aberto a oportunidades",
+    "msg": "Tem um projeto interessante? Me chama.",
+    "sub": "Disponível para posições full-time, contratos e freela em Back-end, DevOps e Segurança."
+  },
+  "notFound": {
+    "code": "404",
+    "title": "Página não encontrada",
+    "desc": "Essa rota não existe. Provavelmente ainda está em construção.",
+    "btn": "Voltar ao início"
+  },
+  "error": {
+    "code": "500",
+    "title": "Algo deu errado",
+    "desc": "Ocorreu um erro inesperado. Tente recarregar a página.",
+    "btn": "Recarregar"
+  }
+}
