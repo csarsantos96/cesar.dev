@@ -10,7 +10,7 @@
   "hero": {
     "status": "available for opportunities",
     "title": "Back-end · DevOps · Security Engineer",
-    "desc": "Building resilient systems, secure pipelines and scalable infrastructure. Specialized in Back-end, DevOps, DevSecOps and Cybersecurity.",
+    "desc": "Building resilient systems, secure pipelines, and scalable infrastructure. Specialized in Back-end, DevOps, DevSecOps, and Cybersecurity.",
     "cta1": "View projects",
     "cta2": "Get in touch"
   },
@@ -22,10 +22,10 @@
   },
   "about": {
     "tag": "about me",
-    "title": "Who I am",
-    "bio": "I'm a software engineer focused on building scalable and secure solutions with real impact. My experience combines back-end development, cloud-native infrastructure and cybersecurity, following a DevSecOps approach. I've worked on data-driven systems, automation pipelines and AI projects, always aiming for performance, reliability and security.",
+    "title": "Who am I",
+    "bio": "I'm a software engineer focused on building scalable and secure solutions with real impact. My experience combines back-end development, cloud-native infrastructure, and cybersecurity, following a DevSecOps approach. I have worked on developing data-driven systems, automation pipelines, and AI projects, always aiming for performance, reliability, and security.",
     "focus": [
-      "Back-end with Java, Python, Django, Flask and Node.js",
+      "Back-end with Java, Python, Django, Flask, and Node.js",
       "Cloud-native infrastructure with Kubernetes and Docker",
       "Security: pentest, vulnerability analysis, SIEM",
       "Robust CI/CD pipelines and GitOps, GitHub Actions"
@@ -52,7 +52,7 @@
       {
         "type": "DATA SCIENCE",
         "name": "NFLStatsLab",
-        "desc": "20 years of NFL data analysis (2003–2023). ETL, Exploratory Data Analysis and visualizations with Pandas, NumPy and Seaborn.",
+        "desc": "20 years of NFL data analysis (2003–2023). ETL, Exploratory Data Analysis, and visualizations with Pandas, NumPy, and Seaborn.",
         "stack": [
           "Python",
           "Pandas",
@@ -65,8 +65,8 @@
       },
       {
         "type": "DEVOPS",
-        "name": "First Workflow with GitHub Actions",
-        "desc": "Simple CI/CD pipeline with GitHub Actions to automate validations, test workflows, and understand the basics of DevOps automation.",
+        "name": "Primeiro Workflow com Github Actions",
+        "desc": "Simple CI/CD pipeline with GitHub Actions to automate validations, test workflows, and understand the basis of automations in DevOps projects.",
         "stack": [
           "GitHub Actions",
           "CI/CD"
@@ -77,7 +77,7 @@
       {
         "type": "DEVOPS",
         "name": "LINUXtips Workspace",
-        "desc": "Hands-on workspace for the Linux para Cloud Native training — SSH troubleshooting challenges, Linux/Cloud Native mind maps, and DevOps project logs.",
+        "desc": "Practical workspace from the Linux for Cloud Native training — SSH troubleshooting challenges, mind maps, and logs from a DevOps project.",
         "stack": [
           "Linux",
           "SSH",
@@ -90,7 +90,7 @@
       {
         "type": "BACK-END",
         "name": "BookStore API",
-        "desc": "RESTful API for bookstore management with authentication, full CRUD and deployment on Heroku.",
+        "desc": "RESTful API for library management with authentication, full CRUD, and deployment on Heroku.",
         "stack": [
           "Python",
           "Django",
@@ -103,7 +103,7 @@
       {
         "type": "DEVOPS",
         "name": "commandlinux.dev",
-        "desc": "Technical blog with an automated publishing pipeline: on every new Markdown post, a GitHub Actions workflow triggers LLM-powered translation and generates multilingual versions — from commit to deploy, zero manual steps.",
+        "desc": "Technical blog with automated publishing pipeline: for each Markdown post, a GitHub Actions workflow triggers LLM-based translation and generates multilingual versions — from commit to deploy, without manual steps.",
         "stack": [
           "Astro",
           "GitHub Actions",
@@ -126,45 +126,45 @@
     "expLabel": "// experience",
     "eduLabel": "// education",
     "present": "Present",
-    "download": "Download CV (PDF)",
+    "download": " Download CV (PDF)",
     "experience": [
       {
-        "date": "Oct 2025 — May 2026",
+        "date": "Out 2025 — Maio 2026",
         "title": "Software Engineer",
-        "company": "SONDA — Court of Justice of Acre",
-        "desc": "Architected judicial transcription pipeline (WhisperX + CUDA, NVIDIA A2000) deployed fully offline. Designed full Flask backend for AI-assisted procurement system with Keycloak + JWT, LLM integration and pytest coverage. Modernized Vera System with optimized PostgreSQL views. Interim technical lead for mixed dev + L1/L2 support team."
+        "company": "SONDA — Tribunal de Justiça do Acre",
+        "desc": "Architected legal transcription pipeline with diarization (WhisperX + CUDA, NVIDIA A2000 GPU) in an offline environment. Designed a complete Flask backend for an AI-assisted bidding system with Keycloak + JWT, LLM integration, and pytest coverage. Modernized the Vera System with optimized PostgreSQL views. Interim technical leadership for a mixed dev + N1/N2 support team."
       },
       {
-        "date": "Mar 2024 — Oct 2024",
+        "date": "Mar 2024 — Out 2024",
         "title": "Software Developer",
-        "company": "Iteracre — Institute of Land of Acre",
-        "desc": "Engineered a state-wide Land Registration System using PHP and CakePHP, automating land demarcation and title issuance. Managed containerized environments with Docker."
+        "company": "Iteracre — Instituto de Terras do Acre",
+        "desc": "Development of the State Land Registry System with PHP and CakePHP, automating land demarcation and title issuance. Management of containerized environments with Docker."
       },
       {
-        "date": "Sep 2022 — Dec 2022",
+        "date": "Set 2022 — Dez 2022",
         "title": "Data Analyst / Web Developer",
-        "company": "XLand Holding — Remote",
-        "desc": "Web development with PHP and Laravel, IT technical support, and SQL database management focused on data integrity and BI reporting."
+        "company": "XLand Holding — Remoto",
+        "desc": "Web development with PHP and Laravel, IT technical support, and SQL database management focusing on integrity and BI reports."
       },
       {
-        "date": "Feb 2019 — Aug 2022",
-        "title": "IT Division Chief",
-        "company": "Government of the State of Acre — SASDHM",
-        "desc": "Led IT support and governance at the Secretariat of Human Rights. Digitalized workflows and designed a virtual technical support environment."
+        "date": "Fev 2019 — Ago 2022",
+        "title": "Head of IT Division",
+        "company": "Governo do Estado do Acre — SASDHM",
+        "desc": "Leadership of IT support and governance at the Secretariat of Human Rights. Digitization of workflows and structuring of a virtual technical support environment."
       }
     ],
     "education": [
       {
         "date": "2021 — Jul 2025",
-        "title": "B.S. in Information Systems",
+        "title": "Bachelor's Degree in Information Systems",
         "company": "Estácio Unimeta",
-        "desc": "Expected graduation: July 2025."
+        "desc": "Expected completion July 2025."
       },
       {
-        "date": "Aug 2025",
-        "title": "Postgraduate in Cyber Security — Red Team",
+        "date": "Ago 2025",
+        "title": "Postgraduate Degree in Cybersecurity — Red Team",
         "company": "FIAP",
-        "desc": "Specialization in offensive security, penetration testing and Red Team operations."
+        "desc": "Specialization in offensive security, pentest, and Red Team."
       }
     ]
   },
@@ -172,13 +172,13 @@
     "tag": "contact",
     "title": "Let's talk",
     "open": "Open to opportunities",
-    "msg": "Have an interesting project? Let's talk.",
-    "sub": "Available for full-time positions, contracts and freelance in Back-end, DevOps and Security."
+    "msg": "Have an interesting project? Let's connect.",
+    "sub": "Available for full-time positions, contracts, and freelance work in Back-end, DevOps, and Security."
   },
   "notFound": {
     "code": "404",
     "title": "Page not found",
-    "desc": "This route doesn't exist. It's probably still under construction.",
+    "desc": "This route does not exist. It's probably still under construction.",
     "btn": "Back to home"
   },
   "error": {
