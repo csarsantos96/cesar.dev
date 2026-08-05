@@ -9,6 +9,7 @@ import Certifications from '../components/Certifications.astro';
 import Resume from '../components/Resume.astro';
 import Contact from '../components/Contact.astro';
 import Footer from '../components/Footer.astro';
+import Analytics from '@vercel/analytics/astro';
 import { translations, type Lang } from '../lib/i18n';
 
 const { lang } = Astro.props as { lang: Lang };
@@ -43,6 +44,7 @@ const title = lang === 'pt' ? 'César Santos — Engenheiro Backend' : 'César S
       <Contact t={t} lang={lang} />
     </main>
     <Footer />
+    <Analytics />
 
     <script define:vars={{ lang }} is:inline>
       document.cookie = `lang=${lang}; path=/; max-age=31536000; samesite=lax`;
