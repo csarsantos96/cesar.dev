@@ -75,7 +75,7 @@
 .hero-ctas { display: flex; gap: 1rem; flex-wrap: wrap; }
 
 /* RIGHT */
-.hero-right { display: flex; flex-direction: column; gap: 1.5rem; }
+.hero-right { display: flex; flex-direction: column; gap: 1.5rem; min-width: 0; }
 
 .stats-grid {
   display: grid;
@@ -139,6 +139,7 @@
   font-family: var(--mono);
   font-size: 12px;
   line-height: 1.9;
+  overflow-x: auto;
 }
 .t-prompt { color: var(--accent); }
 .t-cmd { color: var(--text); }
