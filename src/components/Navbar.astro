@@ -34,7 +34,7 @@ const langs: { code: string; href: string }[] = [
   <div class="nav-actions">
     <div class="lang-switcher">
       {langs.map((l) => (
-        <a href={l.href} class={`lang-btn${lang.toUpperCase() === l.code ? ' active' : ''}`}>{l.code}</a>
+        <a href={l.href} data-lang={l.code.toLowerCase()} class={`lang-btn${lang.toUpperCase() === l.code ? ' active' : ''}`}>{l.code}</a>
       ))}
     </div>
 
@@ -58,4 +58,13 @@ const langs: { code: string; href: string }[] = [
     toggle.setAttribute('aria-expanded', String(!!open));
   });
   document.querySelectorAll('[data-nav-link]').forEach((a) => a.addEventListener('click', close));
+
+  // só grava o cookie quando o usuário troca o idioma manualmente pelo seletor,
+  // pra não sobrescrever a detecção por país (x-vercel-ip-country) do middleware
+  document.querySelectorAll<HTMLAnchorElement>('.lang-btn').forEach((a) => {
+    a.addEventListener('click', () => {
+      const lang = a.dataset.lang;
+      document.cookie = `lang=${lang}; path=/; max-age=31536000; samesite=lax`;
+    });
+  });
 </script>
