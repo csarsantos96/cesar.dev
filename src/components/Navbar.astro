@@ -38,6 +38,16 @@ const langs: { code: string; href: string }[] = [
       ))}
     </div>
 
+    <button class="theme-toggle" data-theme-toggle aria-label="Alternar tema claro/escuro" type="button">
+      <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="4" />
+        <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41" />
+      </svg>
+      <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z" />
+      </svg>
+    </button>
+
     <button class="menu-toggle" data-menu-toggle aria-label="Abrir menu" aria-expanded="false" type="button">
       <span /><span /><span />
     </button>
@@ -66,5 +76,17 @@ const langs: { code: string; href: string }[] = [
       const lang = a.dataset.lang;
       document.cookie = `lang=${lang}; path=/; max-age=31536000; samesite=lax`;
     });
+  });
+
+  const themeToggle = document.querySelector('[data-theme-toggle]');
+  const getEffectiveTheme = () => {
+    const explicit = document.documentElement.getAttribute('data-theme');
+    if (explicit === 'light' || explicit === 'dark') return explicit;
+    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  };
+  themeToggle?.addEventListener('click', () => {
+    const next = getEffectiveTheme() === 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', next);
+    localStorage.setItem('theme', next);
   });
 </script>

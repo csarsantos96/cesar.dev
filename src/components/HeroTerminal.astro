@@ -45,7 +45,7 @@
     { method: 'GET', path: '/api/v1/metrics', status: 200, tag: 'info' },
   ];
   const TAG_COLOR: Record<string, string> = {
-    info: 'var(--accent, #c084fc)', warn: 'var(--t-yellow, #fbbf24)', error: 'var(--t-red, #f87171)',
+    info: 'var(--term-accent, #c084fc)', warn: 'var(--t-yellow, #fbbf24)', error: 'var(--t-red, #f87171)',
   };
   function makeLine() {
     const e = ENDPOINTS[Math.floor(Math.random() * ENDPOINTS.length)];

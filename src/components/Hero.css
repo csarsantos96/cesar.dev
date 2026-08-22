@@ -26,8 +26,8 @@
   animation: pulse 2s infinite;
 }
 @keyframes pulse {
-  0%, 100% { opacity: 1; box-shadow: 0 0 0 0 rgba(255,255,255,0.3); }
-  50% { opacity: 0.7; box-shadow: 0 0 0 6px rgba(255,255,255,0); }
+  0%, 100% { opacity: 1; box-shadow: 0 0 0 0 color-mix(in srgb, var(--available) 30%, transparent); }
+  50% { opacity: 0.7; box-shadow: 0 0 0 6px color-mix(in srgb, var(--available) 0%, transparent); }
 }
 
 .hero-avatar {
@@ -108,17 +108,27 @@
   text-transform: uppercase;
 }
 
-/* TERMINAL */
+/* TERMINAL — sempre com o visual dark de terminal, independente do tema do site */
 .terminal {
-  background: var(--surface);
-  border: 1px solid var(--border);
+  --term-bg: #161616;
+  --term-bg2: #111111;
+  --term-border: #282828;
+  --term-text: #f5f5f5;
+  --term-text2: #888888;
+  --term-text3: #4a4a4a;
+  --term-accent: #ffffff;
+  --term-accent2: #cccccc;
+  --term-muted: #c8c8c8;
+
+  background: var(--term-bg);
+  border: 1px solid var(--term-border);
   border-radius: 8px;
   overflow: hidden;
 }
 .terminal-bar {
   padding: 8px 12px;
-  background: var(--bg3);
-  border-bottom: 1px solid var(--border);
+  background: var(--term-bg2);
+  border-bottom: 1px solid var(--term-border);
   display: flex;
   align-items: center;
   gap: 6px;
@@ -130,7 +140,7 @@
 .terminal-title {
   font-family: var(--mono);
   font-size: 11px;
-  color: var(--text3);
+  color: var(--term-text3);
   margin-left: 8px;
   letter-spacing: 0.05em;
 }
@@ -140,17 +150,18 @@
   font-size: 12px;
   line-height: 1.9;
   overflow-x: auto;
+  color: var(--term-text);
 }
-.t-prompt { color: var(--accent); }
-.t-cmd { color: var(--text); }
-.t-out { color: var(--text2); }
-.t-key { color: var(--muted); }
-.t-val { color: var(--accent2); }
-.t-comment { color: var(--text3); }
+.t-prompt { color: var(--term-accent); }
+.t-cmd { color: var(--term-text); }
+.t-out { color: var(--term-text2); }
+.t-key { color: var(--term-muted); }
+.t-val { color: var(--term-accent2); }
+.t-comment { color: var(--term-text3); }
 .cursor {
   display: inline-block;
   width: 8px; height: 14px;
-  background: var(--accent);
+  background: var(--term-accent);
   vertical-align: middle;
   animation: blink 1s step-end infinite;
 }

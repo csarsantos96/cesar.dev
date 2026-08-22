@@ -1,6 +1,53 @@
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&family=Syne:wght@400;500;700;800&display=swap');
 
 :root {
+  /* modo claro (padrão) */
+  --bg: #fbfbfa;
+  --bg2: #f4f4f3;
+  --bg3: #ededec;
+  --surface: #ffffff;
+  --surface2: #f5f5f4;
+  --border: #e2e2e0;
+  --border2: #cccccb;
+  --accent: #0a0a0a;
+  --accent2: #2e2e2e;
+  --accent-hover: #0089a8;
+  --muted: #454545;
+  --text: #111111;
+  --text2: #5c5c5c;
+  --text3: #9a9a98;
+  --red: #d1304a;
+  --available: #16a34a;
+  --nav-bg: rgba(255, 255, 255, 0.88);
+  --nav-bg-strong: rgba(255, 255, 255, 0.97);
+  --mono: 'JetBrains Mono', monospace;
+  --sans: 'Syne', sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    --bg: #080808;
+    --bg2: #0d0d0d;
+    --bg3: #111111;
+    --surface: #161616;
+    --surface2: #1c1c1c;
+    --border: #282828;
+    --border2: #3a3a3a;
+    --accent: #ffffff;
+    --accent2: #cccccc;
+    --accent-hover: #00d4ff;
+    --muted: #c8c8c8;
+    --text: #f5f5f5;
+    --text2: #888888;
+    --text3: #4a4a4a;
+    --red: #ff4d6d;
+    --available: #22c55e;
+    --nav-bg: rgba(8, 8, 8, 0.88);
+    --nav-bg-strong: rgba(10, 10, 10, 0.97);
+  }
+}
+
+:root[data-theme='dark'] {
   --bg: #080808;
   --bg2: #0d0d0d;
   --bg3: #111111;
@@ -16,9 +63,9 @@
   --text2: #888888;
   --text3: #4a4a4a;
   --red: #ff4d6d;
-  --mono: 'JetBrains Mono', monospace;
-  --sans: 'Syne', sans-serif;
-  --available : #22c55e
+  --available: #22c55e;
+  --nav-bg: rgba(8, 8, 8, 0.88);
+  --nav-bg-strong: rgba(10, 10, 10, 0.97);
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -84,7 +131,7 @@ a { text-decoration: none; color: inherit; }
   display: inline-flex;
   padding: 10px 24px;
   background: var(--accent);
-  color: #000;
+  color: var(--bg);
   font-family: var(--mono);
   font-size: 12px;
   font-weight: 700;
