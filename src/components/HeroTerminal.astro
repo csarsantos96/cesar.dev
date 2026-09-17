@@ -1,5 +1,15 @@
 ---
-// Terminal do hero. Marcação estática + script client-side (sem React).
+import { skillGroups } from '../lib/data';
+
+const stack = skillGroups
+  .map(({ key, tags }) => ({ key, names: tags.filter((tag) => !tag.learning).map((tag) => tag.name) }))
+  .filter(({ names }) => names.length > 0);
+const goals = [
+  { key: 'career', names: ['Security Engineering', 'DevOps / SRE'] },
+  ...skillGroups
+    .map(({ key, tags }) => ({ key, names: tags.filter((tag) => tag.learning).map((tag) => tag.name) }))
+    .filter(({ names }) => names.length > 0),
+];
 ---
 <div class="terminal">
   <div class="terminal-bar">
@@ -9,17 +19,34 @@
     <span class="terminal-title">cesar@cesarsantos.dev — zsh</span>
   </div>
   <div class="terminal-body">
-    <div><span class="t-prompt">→</span> <span class="t-cmd">whoami</span></div>
-    <div class="t-out">César Santos · Software Engineer (Backend)</div>
+    <div class="t-hint t-out">Digite um comando e pressione Enter. Use help para ver todos.</div>
+    <div class="t-history" data-history role="log" aria-label="Respostas do terminal" aria-live="polite"></div>
+    <form class="t-input-row" data-terminal-form>
+      <span class="t-prompt" aria-hidden="true">→</span>
+      <input name="command" aria-label="Comando do terminal" placeholder="whoami" autocomplete="off" spellcheck="false" autocapitalize="off" />
+    </form>
+    <template data-output="stack">
+    <div class="t-stack">
+      <div class="t-comment">{'{'}</div>
+      {stack.map(({ key, names }, index) => (
+        <div class="t-json-line"><span class="t-key">{JSON.stringify(key)}</span><span class="t-comment">: </span><span class="t-val">[{names.map((name, nameIndex) => (<>{nameIndex > 0 && <>,<wbr /></>}{JSON.stringify(name)}</>))}]{index < stack.length - 1 ? ',' : ''}</span></div>
+      ))}
+      <div class="t-comment">{'}'}</div>
+    </div>
 
-    <div style="margin-top:8px"><span class="t-prompt">→</span> <span class="t-cmd">cat stack.json</span></div>
-    <div><span class="t-key">"backend"</span><span class="t-comment">:</span> <span class="t-val">["Python", "FastAPI", "Django", "PostgreSQL"]</span></div>
+    </template>
+    <template data-output="goals">
+    <div class="t-comment">{'{'}</div>
+    {goals.map(({ key, names }, index) => (
+      <div class="t-json-line"><span class="t-key">{JSON.stringify(key)}</span><span class="t-comment">: </span><span class="t-val">{JSON.stringify(names)}{index < goals.length - 1 ? ',' : ''}</span></div>
+    ))}
+    <div class="t-comment">{'}'}</div>
 
-    <div style="margin-top:8px"><span class="t-prompt">→</span> <span class="t-cmd">cat goals.txt</span></div>
-    <div class="t-out"><span style="color:var(--t-green,#34d399)">→</span> Security Engineering</div>
-    <div class="t-out"><span style="color:var(--t-green,#34d399)">→</span> DevOps / SRE</div>
-
-    <div style="margin-top:8px"><span class="t-prompt">→</span> <span class="t-cmd">cert-path --status</span></div>
+    </template>
+    <template data-output="certs">
+    <div class="t-out" style="white-space:pre">OCI Foundations     <span style="color:var(--t-green,#34d399)">[▓▓▓▓▓▓▓▓▓▓]</span> <span style="color:var(--t-green,#34d399)">100% completed</span></div>
+    <div class="t-out" style="white-space:pre">OCI AI Foundations  <span style="color:var(--t-green,#34d399)">[▓▓▓▓▓▓▓▓▓▓]</span> <span style="color:var(--t-green,#34d399)">100% completed</span></div>
+    <div class="t-out" style="white-space:pre">AWS Cloud Practitioner <span style="color:var(--t-yellow,#fbbf24)">[▓▓▓▓▓▓▓▓▓░]</span> <span style="color:var(--t-yellow,#fbbf24)">90% — exam pending</span></div>
     <div class="t-comment">// studying via LINUXtips guide</div>
     <div class="t-out" style="white-space:pre">CKAD  <span style="color:var(--t-yellow,#fbbf24)">[▓░░░░░░░░░]</span> <span style="color:var(--t-yellow,#fbbf24)">next</span></div>
     <div class="t-out" style="white-space:pre">CKA   <span style="color:var(--t-muted,#7c6f8f)">[░░░░░░░░░░]</span> <span style="color:var(--t-muted,#7c6f8f)">planned</span></div>
@@ -27,15 +54,73 @@
     <div class="t-out" style="white-space:pre">KCSA  <span style="color:var(--t-muted,#7c6f8f)">[░░░░░░░░░░]</span> <span style="color:var(--t-muted,#7c6f8f)">planned</span></div>
     <div class="t-out" style="white-space:pre">CKS   <span style="color:var(--t-muted,#7c6f8f)">[░░░░░░░░░░]</span> <span style="color:var(--t-muted,#7c6f8f)">planned</span></div>
 
-    <div style="margin-top:8px"><span class="t-prompt">→</span> <span class="t-cmd">echo "open to work"</span></div>
+    </template>
+    <template data-output="work">
     <div class="t-out">open to work</div>
 
+    </template>
     <div style="margin-top:8px"><span class="t-prompt">→</span> <span class="t-cmd">tail -f /var/log/api.log</span></div>
     <div id="log-tail" data-log-tail></div>
   </div>
 </div>
 
 <script>
+  const terminal = document.querySelector('.terminal');
+  const form = terminal?.querySelector<HTMLFormElement>('[data-terminal-form]');
+  const input = form?.querySelector<HTMLInputElement>('input');
+  const history = terminal?.querySelector<HTMLElement>('[data-history]');
+  if (terminal && form && input && history) {
+    const commands: Record<string, string> = {
+      'cat stack.json': 'stack', 'cat goals.json': 'goals',
+      'cert-path --status': 'certs', 'echo "open to work"': 'work',
+    };
+    const previous: string[] = [];
+    let position = 0;
+    function execute(raw: string) {
+      const command = raw.trim().replace(/\s+/g, ' ');
+      if (!command) return;
+      previous.push(command);
+      position = previous.length;
+      input!.value = '';
+      if (command === 'clear') {
+        history!.replaceChildren();
+        return;
+      }
+      const entry = document.createElement('div');
+      entry.className = 't-entry';
+      const prompt = document.createElement('div');
+      prompt.className = 't-cmd';
+      prompt.textContent = `→ ${command}`;
+      entry.append(prompt);
+      const template = terminal!.querySelector<HTMLTemplateElement>(`template[data-output="${commands[command] || ''}"]`);
+      if (template) {
+        entry.append(template.content.cloneNode(true));
+      } else {
+        const output = document.createElement('div');
+        output.className = 't-out';
+        output.textContent = command === 'whoami'
+          ? 'César Santos · Software Engineer (Backend)'
+          : command === 'help'
+            ? 'whoami · cat stack.json · cat goals.json · cert-path --status · echo "open to work" · clear'
+            : `Comando não encontrado: ${command}. Digite help.`;
+        entry.append(output);
+      }
+      history!.append(entry);
+      while (history!.children.length > 30) history!.firstElementChild?.remove();
+      history!.scrollTop = history!.scrollHeight;
+    }
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+      execute(input.value);
+    });
+    input.addEventListener('keydown', (event) => {
+      if (event.key !== 'ArrowUp' && event.key !== 'ArrowDown') return;
+      event.preventDefault();
+      position = Math.max(0, Math.min(previous.length, position + (event.key === 'ArrowUp' ? -1 : 1)));
+      input.value = previous[position] || '';
+    });
+  }
+
   const ENDPOINTS = [
     { method: 'GET', path: '/api/v1/health', status: 200, tag: 'info' },
     { method: 'POST', path: '/api/v1/auth/token', status: 201, tag: 'info' },
