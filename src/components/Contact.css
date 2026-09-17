@@ -72,14 +72,20 @@
     box-shadow 0.25s ease;
 }
 
-.contact-link-card:hover {
+.contact-link-card:hover,
+.contact-link-card:focus-visible {
   transform: translateY(-2px);
   border-color: var(--accent-hover);
-  background: linear-gradient(180deg, var(--surface2), #1b1b1b);
+  background: linear-gradient(180deg, var(--surface), var(--surface2));
   box-shadow:
-    0 0 0 1px rgba(0, 212, 255, 0.18),
-    0 10px 24px rgba(0, 0, 0, 0.28),
-    0 0 20px rgba(0, 212, 255, 0.08);
+    0 0 0 1px color-mix(in srgb, var(--accent-hover) 18%, transparent),
+    0 8px 20px rgba(0, 0, 0, 0.08),
+    0 0 16px color-mix(in srgb, var(--accent-hover) 8%, transparent);
+}
+
+.contact-link-card:focus-visible {
+  outline: 2px solid var(--accent-hover);
+  outline-offset: 3px;
 }
 
 .contact-link-left {
@@ -103,7 +109,8 @@
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.contact-link-card:hover .contact-link-icon {
+.contact-link-card:hover .contact-link-icon,
+.contact-link-card:focus-visible .contact-link-icon {
   transform: scale(1.04);
   box-shadow: 0 0 14px rgba(0, 212, 255, 0.12);
 }
@@ -117,7 +124,7 @@
 .contact-link-label {
   font-family: var(--mono);
   font-size: 10px;
-  color: var(--text3);
+  color: var(--text2);
   letter-spacing: 0.08em;
   text-transform: uppercase;
   margin-bottom: 3px;
@@ -138,7 +145,8 @@
   transition: transform 0.2s ease, color 0.2s ease;
 }
 
-.contact-link-card:hover .contact-link-arrow {
+.contact-link-card:hover .contact-link-arrow,
+.contact-link-card:focus-visible .contact-link-arrow {
   color: var(--accent-hover);
   transform: translate(2px, -2px);
 }
