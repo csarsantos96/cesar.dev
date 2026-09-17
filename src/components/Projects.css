@@ -38,11 +38,11 @@
 .project-card:hover {
   transform: translateY(-4px);
   border-color: var(--project-color);
-  background: linear-gradient(180deg, var(--surface2), #1f1f1f);
+  background: linear-gradient(180deg, var(--surface), var(--surface2));
   box-shadow:
     0 0 0 1px var(--project-color),
-    0 10px 30px rgba(0, 0, 0, 0.4),
-    0 0 30px color-mix(in srgb, var(--project-color) 18%, transparent);
+    0 8px 20px rgba(0, 0, 0, 0.08),
+    0 0 16px color-mix(in srgb, var(--project-color) 8%, transparent);
 }
 
 .project-header {

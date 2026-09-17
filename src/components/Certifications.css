@@ -45,11 +45,10 @@
 .cert-link:hover {
   transform: translateY(-3px);
   border-color: var(--cert-border);
-  background: linear-gradient(180deg, var(--surface2), #1f1f1f);
+  background: linear-gradient(180deg, var(--surface), var(--surface2));
   box-shadow:
     0 0 0 1px var(--cert-border),
-    0 12px 30px rgba(0, 0, 0, 0.35),
-    0 0 30px var(--cert-glow);
+    0 8px 20px rgba(0, 0, 0, 0.08);
 }
 
 .cert-badge {
