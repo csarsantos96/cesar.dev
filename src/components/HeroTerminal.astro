@@ -1,6 +1,21 @@
 ---
 import { skillGroups } from '../lib/data';
 
+const { lang = 'pt' } = Astro.props;
+const labels = lang === 'en' ? {
+  hint: 'Type a command and press Enter. Use help to see all commands.',
+  history: 'Terminal output',
+  input: 'Terminal command',
+  unknown: 'Command not found:',
+  help: 'Type help.',
+} : {
+  hint: 'Digite um comando e pressione Enter. Use help para ver todos.',
+  history: 'Respostas do terminal',
+  input: 'Comando do terminal',
+  unknown: 'Comando não encontrado:',
+  help: 'Digite help.',
+};
+
 const stack = skillGroups
   .map(({ key, tags }) => ({ key, names: tags.filter((tag) => !tag.learning).map((tag) => tag.name) }))
   .filter(({ names }) => names.length > 0);
@@ -11,7 +26,7 @@ const goals = [
     .filter(({ names }) => names.length > 0),
 ];
 ---
-<div class="terminal">
+<div class="terminal" data-unknown={labels.unknown} data-help-hint={labels.help}>
   <div class="terminal-bar">
     <span class="t-dot t-red" />
     <span class="t-dot t-yellow" />
@@ -19,11 +34,11 @@ const goals = [
     <span class="terminal-title">cesar@cesarsantos.dev — zsh</span>
   </div>
   <div class="terminal-body">
-    <div class="t-hint t-out">Digite um comando e pressione Enter. Use help para ver todos.</div>
-    <div class="t-history" data-history role="log" aria-label="Respostas do terminal" aria-live="polite"></div>
+    <div class="t-hint t-out">{labels.hint}</div>
+    <div class="t-history" data-history role="log" aria-label={labels.history} aria-live="polite"></div>
     <form class="t-input-row" data-terminal-form>
       <span class="t-prompt" aria-hidden="true">→</span>
-      <input name="command" aria-label="Comando do terminal" placeholder="whoami" autocomplete="off" spellcheck="false" autocapitalize="off" />
+      <input name="command" aria-label={labels.input} placeholder="whoami" autocomplete="off" spellcheck="false" autocapitalize="off" />
     </form>
     <template data-output="stack">
     <div class="t-stack">
@@ -102,7 +117,7 @@ const goals = [
           ? 'César Santos · Software Engineer (Backend)'
           : command === 'help'
             ? 'whoami · cat stack.json · cat goals.json · cert-path --status · echo "open to work" · clear'
-            : `Comando não encontrado: ${command}. Digite help.`;
+            : `${terminal!.getAttribute('data-unknown')} ${command}. ${terminal!.getAttribute('data-help-hint')}`;
         entry.append(output);
       }
       history!.append(entry);

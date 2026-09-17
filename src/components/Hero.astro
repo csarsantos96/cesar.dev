@@ -2,7 +2,7 @@
 import HeroTerminal from './HeroTerminal.astro';
 import { certs } from '../lib/data';
 import './Hero.css';
-const { t } = Astro.props;
+const { t, lang } = Astro.props;
 const h = t.hero;
 const s = t.stats;
 ---
@@ -31,6 +31,6 @@ const s = t.stats;
       <div class="stat-card"><div class="stat-num">{certs.length}</div><div class="stat-label">{s.s3}</div></div>
       <div class="stat-card"><div class="stat-num">3</div><div class="stat-label">{s.s4}</div></div>
     </div>
-    <HeroTerminal />
+    <HeroTerminal lang={lang} />
   </div>
 </section>
