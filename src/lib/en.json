@@ -23,7 +23,7 @@
   "about": {
     "tag": "about me",
     "title": "Who am I",
-    "bio": "I'm a software engineer focused on building scalable and secure solutions with real impact. My experience combines back-end development, cloud-native infrastructure, and cybersecurity, following a DevSecOps approach. I have worked on developing data-driven systems, automation pipelines, and AI projects, always aiming for performance, reliability, and security.",
+    "bio": "Software engineer with experience in back-end development, cloud-native, automation, and cybersecurity. I build scalable, secure, and reliable solutions, focusing on performance, observability, and DevSecOps best practices. I have worked with data-driven systems, automation pipelines, infrastructure, and AI projects, connecting development and operations to deliver solutions with real impact.",
     "focus": [
       "Back-end with Java, Python, Django, Flask, and Node.js",
       "Cloud-native infrastructure with Kubernetes and Docker",

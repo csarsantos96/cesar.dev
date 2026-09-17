@@ -23,7 +23,7 @@
   "about": {
     "tag": "sobre mim",
     "title": "Quem sou eu",
-    "bio": "Sou um engenheiro de software focado em construir soluções escaláveis e seguras com impacto real. Minha experiência combina desenvolvimento back-end, infraestrutura cloud-native e cibersegurança, seguindo uma abordagem DevSecOps. Já atuei no desenvolvimento de sistemas orientados a dados, pipelines de automação e projetos com IA, sempre buscando performance, confiabilidade e segurança.",
+    "bio": "Engenheiro de software com experiência em desenvolvimento back-end, cloud-native, automação e cibersegurança. Atuo na construção de soluções escaláveis, seguras e confiáveis, com foco em performance, observabilidade e boas práticas de DevSecOps. Já trabalhei com sistemas orientados a dados, pipelines de automação, infraestrutura e projetos com IA, conectando desenvolvimento e operação para entregar soluções com impacto real.",
     "focus": [
       "Back-end com Java, Python, Django, Flask e Node.js",
       "Infraestrutura cloud-native com Kubernetes e Docker",
