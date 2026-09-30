@@ -23,7 +23,7 @@
   "about": {
     "tag": "about me",
     "title": "Who am I",
-    "communityTitle": "LINUXtips Ambassador in Acre, Brazil",
+    "communityTitle": "LINUXtips Ambassador in Acre",
     "bio": "Software engineer with experience in back-end development, cloud-native, automation, and cybersecurity. I build scalable, secure, and reliable solutions, focusing on performance, observability, and DevSecOps best practices. I have worked with data-driven systems, automation pipelines, infrastructure, and AI projects, connecting development and operations to deliver solutions with real impact.",
     "focus": [
       "Back-end with Java, Python, Django, Flask, and Node.js",

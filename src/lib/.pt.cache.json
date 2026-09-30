@@ -23,6 +23,7 @@
   "about": {
     "tag": "sobre mim",
     "title": "Quem sou eu",
+    "communityTitle": "Embaixador da LINUXtips no Acre",
     "bio": "Engenheiro de software com experiência em desenvolvimento back-end, cloud-native, automação e cibersegurança. Atuo na construção de soluções escaláveis, seguras e confiáveis, com foco em performance, observabilidade e boas práticas de DevSecOps. Já trabalhei com sistemas orientados a dados, pipelines de automação, infraestrutura e projetos com IA, conectando desenvolvimento e operação para entregar soluções com impacto real.",
     "focus": [
       "Back-end com Java, Python, Django, Flask e Node.js",
