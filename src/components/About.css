@@ -135,6 +135,14 @@
   max-width: 70ch;
 }
 
+.about-community {
+  margin: -0.5rem 0 2rem;
+  font-family: var(--mono);
+  font-size: 12px;
+  line-height: 1.8;
+  color: var(--muted);
+}
+
 /* ================= FOCUS (VERSÃO CLEAN) ================= */
 
 .about-focus-grid {
