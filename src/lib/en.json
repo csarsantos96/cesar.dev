@@ -51,6 +51,19 @@
     "title": "Projects",
     "items": [
       {
+        "type": "BACK-END",
+        "name": "Brazil Elections 2026 Dashboard",
+        "desc": "Dockerized dashboard for Brazil’s 2026 election results, built with Python, FastAPI, and JavaScript. Tracks official TSE data with automatic updates and state and municipality filters.",
+        "stack": [
+          "Python",
+          "FastAPI",
+          "JavaScript",
+          "Docker"
+        ],
+        "liveUrl": null,
+        "repoUrl": "https://github.com/csarsantos96/BrazilElections2026"
+      },
+      {
         "type": "DATA SCIENCE",
         "name": "NFLStatsLab",
         "desc": "20 years of NFL data analysis (2003–2023). ETL, Exploratory Data Analysis, and visualizations with Pandas, NumPy, and Seaborn.",

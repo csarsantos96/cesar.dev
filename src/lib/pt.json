@@ -51,6 +51,19 @@
     "title": "Projetos",
     "items": [
       {
+        "type": "BACK-END",
+        "name": "Painel das Eleições Brasileiras 2026",
+        "desc": "Dashboard em Docker para os resultados das eleições brasileiras de 2026, desenvolvido com Python, FastAPI e JavaScript. Acompanha dados oficiais do TSE com atualizações automáticas e filtros por estado e município.",
+        "stack": [
+          "Python",
+          "FastAPI",
+          "JavaScript",
+          "Docker"
+        ],
+        "liveUrl": null,
+        "repoUrl": "https://github.com/csarsantos96/BrazilElections2026"
+      },
+      {
         "type": "DATA SCIENCE",
         "name": "NFLStatsLab",
         "desc": "Análise de 20 anos de dados da NFL (2003–2023). ETL, Exploratory Data Analysis e visualizações com Pandas, NumPy e Seaborn.",
