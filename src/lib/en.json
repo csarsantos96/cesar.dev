@@ -52,8 +52,8 @@
     "items": [
       {
         "type": "BACK-END",
-        "name": "Brazil Elections 2026 Dashboard",
-        "desc": "Dockerized dashboard for Brazil’s 2026 election results, built with Python, FastAPI, and JavaScript. Tracks official TSE data with automatic updates and state and municipality filters.",
+        "name": "Painel das Eleições Brasileiras 2026",
+        "desc": "Dashboard in Docker for the results of the 2026 Brazilian elections, developed with Python, FastAPI, and JavaScript. It tracks official TSE data with automatic updates and filters by state and municipality.",
         "stack": [
           "Python",
           "FastAPI",
@@ -66,7 +66,7 @@
       {
         "type": "DATA SCIENCE",
         "name": "NFLStatsLab",
-        "desc": "20 years of NFL data analysis (2003–2023). ETL, Exploratory Data Analysis, and visualizations with Pandas, NumPy, and Seaborn.",
+        "desc": "Analysis of 20 years of NFL data (2003–2023). ETL, Exploratory Data Analysis, and visualizations with Pandas, NumPy, and Seaborn.",
         "stack": [
           "Python",
           "Pandas",
@@ -80,7 +80,7 @@
       {
         "type": "DEVOPS",
         "name": "Primeiro Workflow com Github Actions",
-        "desc": "Simple CI/CD pipeline with GitHub Actions to automate validations, test workflows, and understand the basis of automations in DevOps projects.",
+        "desc": "Simple CI/CD pipeline with GitHub Actions to automate validations, test the workflow, and understand the basis of automations in DevOps projects.",
         "stack": [
           "GitHub Actions",
           "CI/CD"
@@ -104,7 +104,7 @@
       {
         "type": "BACK-END",
         "name": "BookStore API",
-        "desc": "RESTful API for library management with authentication, full CRUD, and deployment on Heroku.",
+        "desc": "RESTful API for bookstore management with authentication, full CRUD, and deploy on Heroku.",
         "stack": [
           "Python",
           "Django",
@@ -117,7 +117,7 @@
       {
         "type": "DEVOPS",
         "name": "commandlinux.dev",
-        "desc": "Technical blog with automated publishing pipeline: for each Markdown post, a GitHub Actions workflow triggers LLM-based translation and generates multilingual versions — from commit to deploy, without manual steps.",
+        "desc": "Technical blog with automated publication pipeline: for each Markdown post, a GitHub Actions workflow triggers translation via LLM and generates multilingual versions — from commit to deploy, without manual steps.",
         "stack": [
           "Astro",
           "GitHub Actions",
