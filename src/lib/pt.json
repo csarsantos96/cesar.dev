@@ -146,7 +146,7 @@
       {
         "type": "DEVOPS",
         "name": "Giropops Status — Descomplicando Docker",
-        "desc": "Aplicação web em Python, Flask e Redis que monitora serviços HTTP, mantém histórico de verificações e expõe métricas Prometheus em um painel de status. No treinamento Descomplicando Docker, da LINUXtips, o projeto serve de base para praticar o empacotamento e a execução da aplicação em containers com Docker e Compose.",
+        "desc": "Projeto de estudos do Descomplicando o Docker, da LINUXtips, baseado no Giropops Status: aplicação Python, Flask e Redis para monitorar serviços HTTP, registrar verificações e expor métricas Prometheus. A prática acompanha a criação e otimização de imagens com Dockerfiles, segurança com Distroless, persistência com volumes, redes entre containers e execução de múltiplos serviços com Docker Compose.",
         "stack": [
           "Docker",
           "Docker Compose",
