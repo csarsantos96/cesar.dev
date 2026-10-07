@@ -117,7 +117,7 @@
       {
         "type": "DEVOPS",
         "name": "Giropops Status — Linux para Cloud Native",
-        "desc": "Aplicação web que monitora a disponibilidade de serviços HTTP, registra o histórico de verificações e exibe um painel de status com métricas Prometheus. Com Python, Flask e Redis, o projeto será usado para praticar administração Linux: SSH, permissões, systemd, análise de logs, backups e automação de deploy. A desenvolver no curso Linux para Cloud Native, da LINUXtips.",
+        "desc": "Giropops Status é a mesma aplicação usada no projeto Descomplicando Docker, aqui com foco em administração Linux. Desenvolvida com Python, Flask e Redis, monitora serviços HTTP, mantém histórico de verificações e expõe métricas Prometheus. Esta etapa do treinamento da LINUXtips trabalha SSH, permissões, systemd, análise de logs, backups e automação de deploy.",
         "stack": [
           "Python",
           "Flask",
@@ -146,7 +146,7 @@
       {
         "type": "DEVOPS",
         "name": "Giropops Status — Descomplicando Docker",
-        "desc": "Projeto de estudos do Descomplicando o Docker, da LINUXtips, baseado no Giropops Status: aplicação Python, Flask e Redis para monitorar serviços HTTP, registrar verificações e expor métricas Prometheus. A prática acompanha a criação e otimização de imagens com Dockerfiles, segurança com Distroless, persistência com volumes, redes entre containers e execução de múltiplos serviços com Docker Compose.",
+        "desc": "Giropops Status é a mesma aplicação usada no projeto Linux para Cloud Native, aqui com foco em conteinerização. Com Python, Flask e Redis, monitora serviços HTTP e expõe métricas Prometheus. Esta etapa do Descomplicando o Docker, da LINUXtips, trabalha Dockerfiles, otimização de imagens, segurança com Distroless, volumes, redes e execução de múltiplos serviços com Docker Compose.",
         "stack": [
           "Docker",
           "Docker Compose",
