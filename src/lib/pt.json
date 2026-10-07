@@ -144,6 +144,21 @@
         "repoUrl": "https://github.com/csarsantos96/linuxtips-workspace/tree/main/projetos/pick-2026"
       },
       {
+        "type": "DEVOPS",
+        "name": "Giropops Status — Descomplicando Docker",
+        "desc": "Aplicação web em Python, Flask e Redis que monitora serviços HTTP, mantém histórico de verificações e expõe métricas Prometheus em um painel de status. No treinamento Descomplicando Docker, da LINUXtips, o projeto serve de base para praticar o empacotamento e a execução da aplicação em containers com Docker e Compose.",
+        "stack": [
+          "Docker",
+          "Docker Compose",
+          "Python",
+          "Flask",
+          "Redis",
+          "Prometheus"
+        ],
+        "liveUrl": null,
+        "repoUrl": "https://github.com/csarsantos96/linuxtips-workspace/tree/main/projetos/descomplicando-docker"
+      },
+      {
         "type": "BACK-END",
         "name": "BookStore API",
         "desc": "API RESTful para gerenciamento de livraria com autenticação, CRUD completo e deploy no Heroku.",
