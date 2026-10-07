@@ -144,9 +144,24 @@
         "repoUrl": "https://github.com/csarsantos96/linuxtips-workspace/tree/main/projetos/pick-2026"
       },
       {
+        "type": "DEVOPS",
+        "name": "Giropops Status — Descomplicando Docker",
+        "desc": "Study project from Descomplicando o Docker, by LINUXtips, based on Giropops Status: a Python, Flask, and Redis application to monitor HTTP services, log checks, and expose Prometheus metrics. The practice covers creating and optimizing images with Dockerfiles, security with Distroless, persistence with volumes, networking between containers, and running multiple services with Docker Compose.",
+        "stack": [
+          "Docker",
+          "Docker Compose",
+          "Python",
+          "Flask",
+          "Redis",
+          "Prometheus"
+        ],
+        "liveUrl": null,
+        "repoUrl": "https://github.com/csarsantos96/linuxtips-workspace/tree/main/projetos/descomplicando-docker"
+      },
+      {
         "type": "BACK-END",
         "name": "BookStore API",
-        "desc": "RESTful API for library management with authentication, complete CRUD, and deploy on Heroku.",
+        "desc": "RESTful API for library management with authentication, full CRUD, and deploy on Heroku.",
         "stack": [
           "Python",
           "Django",
@@ -159,7 +174,7 @@
       {
         "type": "DEVOPS",
         "name": "commandlinux.dev",
-        "desc": "Technical blog with automated publishing pipeline: for each Markdown post, a GitHub Actions workflow triggers translation via LLM and generates multilingual versions — from commit to deploy, without manual steps.",
+        "desc": "Technical blog with automated publishing pipeline: for each Markdown post, a GitHub Actions workflow triggers LLM translation and generates the multilingual versions — from commit to deploy, no manual steps.",
         "stack": [
           "Astro",
           "GitHub Actions",
