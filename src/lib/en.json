@@ -52,7 +52,7 @@
     "items": [
       {
         "type": "BACK-END",
-        "name": "Brazil Elections 2026 Dashboard",
+        "name": "Painel das Eleições Brasileiras 2026",
         "desc": "Dockerized dashboard for Brazil’s 2026 election results, built with Python, FastAPI, and JavaScript. Tracks official TSE data with automatic updates and state and municipality filters.",
         "stack": [
           "Python",
@@ -104,7 +104,7 @@
       {
         "type": "DEVOPS",
         "name": "Construa: kubectl (mkube)",
-        "desc": "A Go CLI that recreates kubectl to explore how Kubernetes works under the hood. The project spans 12 stages covering API connections and authentication, context management, resource queries, live logs, container commands, manifest application, and port forwarding. Planned as part of the LINUXtips Construa training.",
+        "desc": "Go CLI that recreates kubectl to explore how Kubernetes works internally. The project includes 12 steps: API connection and authentication, context management, resource querying, real-time logs, command execution in containers, manifest application, and port-forward. To be developed in the Construa training, by LINUXtips.",
         "stack": [
           "Go",
           "Kubernetes",
@@ -117,7 +117,7 @@
       {
         "type": "DEVOPS",
         "name": "Giropops Status — Linux para Cloud Native",
-        "desc": "A web application that monitors HTTP service availability, records check history, and provides a status dashboard with Prometheus metrics. Built with Python, Flask, and Redis, it will be used to practice Linux administration: SSH, permissions, systemd, log analysis, backups, and deployment automation. Planned as part of the LINUXtips Linux for Cloud Native course.",
+        "desc": "Web application that monitors HTTP service availability, records check history, and displays a status dashboard with Prometheus metrics. Built with Python, Flask, and Redis, the project will be used to practice Linux administration: SSH, permissions, systemd, log analysis, backups, and deploy automation. To be developed in the Linux para Cloud Native course, by LINUXtips.",
         "stack": [
           "Python",
           "Flask",
@@ -131,7 +131,7 @@
       {
         "type": "DEVOPS",
         "name": "PICKStack — PICK 2026",
-        "desc": "A study platform with Pomodoro sessions, spaced-repetition flashcards, and career roadmaps, organized into microservices with Deno and SvelteKit. The PICK 2026 challenge will be to operate the application: build Docker images, deploy to Kubernetes, configure Helm and GitOps with ArgoCD, and monitor metrics, logs, and traces. Planned as part of the LINUXtips training program.",
+        "desc": "Study platform with Pomodoro sessions, spaced repetition flashcards, and career paths, organized into microservices with Deno and SvelteKit. At PICK 2026, the challenge will be to operate this application: create Docker images, publish on Kubernetes, configure Helm and GitOps with ArgoCD, and monitor metrics, logs, and traces. Project to be developed during LINUXtips' training.",
         "stack": [
           "Docker",
           "Kubernetes",
@@ -146,7 +146,7 @@
       {
         "type": "BACK-END",
         "name": "BookStore API",
-        "desc": "RESTful API for library management with authentication, full CRUD, and deployment on Heroku.",
+        "desc": "RESTful API for library management with authentication, complete CRUD, and deploy on Heroku.",
         "stack": [
           "Python",
           "Django",
@@ -159,7 +159,7 @@
       {
         "type": "DEVOPS",
         "name": "commandlinux.dev",
-        "desc": "Technical blog with automated publishing pipeline: for each Markdown post, a GitHub Actions workflow triggers LLM-based translation and generates multilingual versions — from commit to deploy, without manual steps.",
+        "desc": "Technical blog with automated publishing pipeline: for each Markdown post, a GitHub Actions workflow triggers translation via LLM and generates multilingual versions — from commit to deploy, without manual steps.",
         "stack": [
           "Astro",
           "GitHub Actions",
