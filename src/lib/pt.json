@@ -102,6 +102,48 @@
         "repoUrl": "https://github.com/csarsantos96/linuxtips-workspace"
       },
       {
+        "type": "DEVOPS",
+        "name": "Construa: kubectl (mkube)",
+        "desc": "CLI em Go que recria o kubectl para explorar como o Kubernetes funciona por dentro. O projeto prevê 12 etapas: conexão e autenticação na API, gerenciamento de contextos, consulta de recursos, logs em tempo real, execução de comandos em containers, aplicação de manifestos e port-forward. A desenvolver no treinamento Construa, da LINUXtips.",
+        "stack": [
+          "Go",
+          "Kubernetes",
+          "REST API",
+          "YAML"
+        ],
+        "liveUrl": null,
+        "repoUrl": "https://github.com/csarsantos96/linuxtips-workspace/tree/construa/kubectl/projetos/construa/kubectl"
+      },
+      {
+        "type": "DEVOPS",
+        "name": "Giropops Status — Linux para Cloud Native",
+        "desc": "Aplicação web que monitora a disponibilidade de serviços HTTP, registra o histórico de verificações e exibe um painel de status com métricas Prometheus. Com Python, Flask e Redis, o projeto será usado para praticar administração Linux: SSH, permissões, systemd, análise de logs, backups e automação de deploy. A desenvolver no curso Linux para Cloud Native, da LINUXtips.",
+        "stack": [
+          "Python",
+          "Flask",
+          "Redis",
+          "Linux",
+          "systemd"
+        ],
+        "liveUrl": null,
+        "repoUrl": "https://github.com/csarsantos96/linuxtips-workspace/tree/construa/kubectl/projetos/lcn-turma-1"
+      },
+      {
+        "type": "DEVOPS",
+        "name": "PICKStack — PICK 2026",
+        "desc": "Plataforma de estudos com sessões Pomodoro, flashcards com repetição espaçada e trilhas de carreira, organizada em microsserviços com Deno e SvelteKit. No PICK 2026, o desafio será operar essa aplicação: criar imagens Docker, publicar no Kubernetes, configurar Helm e GitOps com ArgoCD e acompanhar métricas, logs e traces. Projeto a desenvolver durante a formação da LINUXtips.",
+        "stack": [
+          "Docker",
+          "Kubernetes",
+          "ArgoCD",
+          "Helm",
+          "Deno",
+          "SvelteKit"
+        ],
+        "liveUrl": null,
+        "repoUrl": "https://github.com/csarsantos96/linuxtips-workspace/tree/construa/kubectl/projetos/pick-2026"
+      },
+      {
         "type": "BACK-END",
         "name": "BookStore API",
         "desc": "API RESTful para gerenciamento de livraria com autenticação, CRUD completo e deploy no Heroku.",

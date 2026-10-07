@@ -23,7 +23,7 @@
   "about": {
     "tag": "about me",
     "title": "Who am I",
-    "communityTitle": "LINUXtips Ambassador in Acre",
+    "communityTitle": "LINUXtips Ambassador in Acre, Brazil",
     "bio": "Software engineer with experience in back-end development, cloud-native, automation, and cybersecurity. I build scalable, secure, and reliable solutions, focusing on performance, observability, and DevSecOps best practices. I have worked with data-driven systems, automation pipelines, infrastructure, and AI projects, connecting development and operations to deliver solutions with real impact.",
     "focus": [
       "Back-end with Java, Python, Django, Flask, and Node.js",
@@ -52,8 +52,8 @@
     "items": [
       {
         "type": "BACK-END",
-        "name": "Painel das Eleições Brasileiras 2026",
-        "desc": "Dashboard in Docker for the results of the 2026 Brazilian elections, developed with Python, FastAPI, and JavaScript. It tracks official TSE data with automatic updates and filters by state and municipality.",
+        "name": "Brazil Elections 2026 Dashboard",
+        "desc": "Dockerized dashboard for Brazil’s 2026 election results, built with Python, FastAPI, and JavaScript. Tracks official TSE data with automatic updates and state and municipality filters.",
         "stack": [
           "Python",
           "FastAPI",
@@ -66,7 +66,7 @@
       {
         "type": "DATA SCIENCE",
         "name": "NFLStatsLab",
-        "desc": "Analysis of 20 years of NFL data (2003–2023). ETL, Exploratory Data Analysis, and visualizations with Pandas, NumPy, and Seaborn.",
+        "desc": "20 years of NFL data analysis (2003–2023). ETL, Exploratory Data Analysis, and visualizations with Pandas, NumPy, and Seaborn.",
         "stack": [
           "Python",
           "Pandas",
@@ -80,7 +80,7 @@
       {
         "type": "DEVOPS",
         "name": "Primeiro Workflow com Github Actions",
-        "desc": "Simple CI/CD pipeline with GitHub Actions to automate validations, test the workflow, and understand the basis of automations in DevOps projects.",
+        "desc": "Simple CI/CD pipeline with GitHub Actions to automate validations, test workflows, and understand the basis of automations in DevOps projects.",
         "stack": [
           "GitHub Actions",
           "CI/CD"
@@ -102,9 +102,51 @@
         "repoUrl": "https://github.com/csarsantos96/linuxtips-workspace"
       },
       {
+        "type": "DEVOPS",
+        "name": "Construa: kubectl (mkube)",
+        "desc": "A Go CLI that recreates kubectl to explore how Kubernetes works under the hood. The project spans 12 stages covering API connections and authentication, context management, resource queries, live logs, container commands, manifest application, and port forwarding. Planned as part of the LINUXtips Construa training.",
+        "stack": [
+          "Go",
+          "Kubernetes",
+          "REST API",
+          "YAML"
+        ],
+        "liveUrl": null,
+        "repoUrl": "https://github.com/csarsantos96/linuxtips-workspace/tree/construa/kubectl/projetos/construa/kubectl"
+      },
+      {
+        "type": "DEVOPS",
+        "name": "Giropops Status — Linux para Cloud Native",
+        "desc": "A web application that monitors HTTP service availability, records check history, and provides a status dashboard with Prometheus metrics. Built with Python, Flask, and Redis, it will be used to practice Linux administration: SSH, permissions, systemd, log analysis, backups, and deployment automation. Planned as part of the LINUXtips Linux for Cloud Native course.",
+        "stack": [
+          "Python",
+          "Flask",
+          "Redis",
+          "Linux",
+          "systemd"
+        ],
+        "liveUrl": null,
+        "repoUrl": "https://github.com/csarsantos96/linuxtips-workspace/tree/construa/kubectl/projetos/lcn-turma-1"
+      },
+      {
+        "type": "DEVOPS",
+        "name": "PICKStack — PICK 2026",
+        "desc": "A study platform with Pomodoro sessions, spaced-repetition flashcards, and career roadmaps, organized into microservices with Deno and SvelteKit. The PICK 2026 challenge will be to operate the application: build Docker images, deploy to Kubernetes, configure Helm and GitOps with ArgoCD, and monitor metrics, logs, and traces. Planned as part of the LINUXtips training program.",
+        "stack": [
+          "Docker",
+          "Kubernetes",
+          "ArgoCD",
+          "Helm",
+          "Deno",
+          "SvelteKit"
+        ],
+        "liveUrl": null,
+        "repoUrl": "https://github.com/csarsantos96/linuxtips-workspace/tree/construa/kubectl/projetos/pick-2026"
+      },
+      {
         "type": "BACK-END",
         "name": "BookStore API",
-        "desc": "RESTful API for bookstore management with authentication, full CRUD, and deploy on Heroku.",
+        "desc": "RESTful API for library management with authentication, full CRUD, and deployment on Heroku.",
         "stack": [
           "Python",
           "Django",
@@ -117,7 +159,7 @@
       {
         "type": "DEVOPS",
         "name": "commandlinux.dev",
-        "desc": "Technical blog with automated publication pipeline: for each Markdown post, a GitHub Actions workflow triggers translation via LLM and generates multilingual versions — from commit to deploy, without manual steps.",
+        "desc": "Technical blog with automated publishing pipeline: for each Markdown post, a GitHub Actions workflow triggers LLM-based translation and generates multilingual versions — from commit to deploy, without manual steps.",
         "stack": [
           "Astro",
           "GitHub Actions",
